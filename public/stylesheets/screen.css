@@ -1,0 +1,8 @@
+body {
+  border-top: 4px solid #e70800;
+  font-family: georgia, serif;
+}
+
+#main_content a {
+  color: #e70800;
+}
