@@ -1,0 +1,174 @@
+#download_button
+  %p download the koans
+
+#navigation
+%ul
+  %li
+    %ol#nix_navigation
+      %li introduction
+      %li the structure
+      %li installing ruby
+      %li what editors can i use?
+      %li the path to enlightenment
+      %li authors
+      %li inspiration
+      %li other resources
+    %ol#windows_navigation
+      %li introduction
+      %li the structure
+      %li installing ruby
+      %li what editors can i use?
+      %li the path to enlightenment
+      %li authors
+      %li inspiration
+      %li other resources
+
+#introduction
+  %h1 Learning Ruby
+  %h2.small_caps with the edgecase ruby koans
+  %p The Koans walk you along the path to enlightenment in order to learn Ruby. The goal is to learn the Ruby language, syntax, structure, and some common functions and libraries. We also teach you culture. Testing is not just something we pay lip service to, but something we live. It is essential in your quest to learn and do great things in the language.
+
+#installing_ruby
+  %h3 Installing Ruby
+  %p.small_caps
+    these instructions are for *nix platforms. 
+    %br/
+    we also have windows instructions.
+  %p In order to run the koans you need Ruby installed. If you do not already have Ruby setup, please visit http://ruby-lang.org/en/downloads for operating system specific instructions.
+  %p To verify your installation, in your terminal window simply type:
+  %div.terminal
+    %p $ ruby --version
+  %p Any response for Ruby with a version number greater than 1.8 is fine.
+
+#what_editors
+  %h3 What Editors Can I Use?
+  %p.small_caps
+    these suggestions are for *nix platforms. 
+    %br/
+    we also have windows suggestions.
+  %p You can really use any editor you’d like, but here are some suggestions:
+  %ul
+    %li Emacs
+    %li Vim
+    %li TextMate
+    %li RubyMine
+    %li jEdit
+
+#the_path
+  %h3 The Path to Enlightenment
+  %p.small_caps
+    these instructions are for *nix platforms. 
+    %br/
+    we also have windows instructions.
+  %p You can run the tests by calling the path_to_englightenment.rb file.
+  %p In your terminal, while in the ruby_koans directory, type:
+  %div.terminal 
+    %p [ ruby_koans ] $ ruby path_to_enlightenment.rb
+
+  #red_green_refactor
+    %h4 Red, Green, Refactor
+    %p In test-driven development (TDD) the mantra has always been red: write a failing test and run it, green: make the test pass, and refactor: look at the code and see if you can make it any better. 
+    %p With the koans, you will need to run the tests and see it fail (red), make the test pass (green), then take a moment and reflect upon the test to see what it is teaching you and improve the code to better communicate its intent (refactor).
+    %p The very first time you run it you will see the following output:
+    %div.terminal 
+      %p 
+        [ ruby_koans ] $ ruby path_to_enlightenment.rb
+        %br/
+        (in /Users/person/dev/ruby_koans)
+        %br/
+        cd koans
+      %p 
+        Thinking AboutAsserts
+        %br/
+        test_assert_truth has damaged your karma.
+      %p 
+        You have not yet reached enlightenment ...
+        %br/
+        <false> is not true.
+      %p 
+        Please meditate on the following code:
+        %br/
+        \./about_asserts.rb:10:in `test_assert_truth'
+        %br/
+        path_to_enlightenment.rb:27
+      %p 
+        mountains are merely mountains
+    %p You have come to the first error. Notice you are told where to look for the error:
+    %div.terminal 
+      %p 
+        Please meditate on the following code:
+        %br/
+        \./about_asserts.rb:10:in `test_assert_truth'
+        %br/
+        path_to_enlightenment.rb:27
+    %p You then open up the about_asserts.rb file in your text editor and look at line 10:
+    %div.editor
+      %p 
+        \# We shall contemplate truth by testing reality, via asserts.
+        %br/
+        def test_assert_truth
+        %br/
+        assert false  # This should be true
+        %br/
+        end
+    %p You then change false to true and run the tests again. You should get a new error.
+    %p Before moving on, think about what you are learning. 
+    %p In this specific case, ignore everything except the method name (test_assert_truth) and the parts inside the method (everything before the end). The goal is for you to see that if you pass a value to the assert method, it will either ensure it is true and continue on, or fail if in fact the statement is false.
+
+#authors
+  %h3 Authors
+  %p 
+    Jim Weirich  
+    %br/
+    \<jim@weirichhouse.org>
+    %br/
+    @jimweirich
+  %p 
+    Joe O'Brien
+    %br/
+    \<joe@edgecase.com>
+    %br/
+    @objo
+
+#inspiration
+  %h3 Inspiration
+  %p A special thanks to Mike Clark and Ara Howard for inspiring this project. Mike Clark wrote an excellent blog post about learning Ruby through unit testing. This sparked an idea that has taken a bit to solidify, that of bringing new rubyists into the community through testing. Ara Howard then gave us the idea for the Koans in his ruby quiz entry on Meta Koans (a must for any rubyist wanting to improve their skills). Also, "The Little Lisper" taught us all the value of the short questions/simple answers style of learning.
+  %p 
+    Mike Clark's post
+    %br/
+    clarkware.com/cgi/blosxom/2005/03/18
+  %p 
+    Meta Koans
+    %br/
+    rubyquiz.com/quiz67.html
+  %p 
+    The Little Lisper
+    %br/
+    amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632
+
+#other_resources
+  %h3 Other Resources
+  %p 
+    EdgeCase Ruby Koans Issue Tracker
+    %br/
+    pivotaltracker.com/projects/48111
+  %p 
+    EdgeCase Ruby Koans on Github
+    %br/
+    github.com/edgecase/ruby_koans
+  %p 
+    The Ruby Language
+    %br/
+    ruby-lang.org
+  %p 
+    Try Ruby in your browser
+    %br/
+    tryruby.org
+  %p 
+    Dave Thomas' introduction to Ruby Programming
+    %br/
+    http://pragprog.com/titles/ruby/programming-ruby
+  %p 
+    Brian Marick's fantastic guide for beginners: Everyday Scripting with Ruby	
+    %br/
+    http://pragprog.com/titles/bmsft/everyday-scripting-with-ruby
