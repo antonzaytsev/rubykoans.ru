@@ -3,6 +3,85 @@ body {
   font-family: georgia, serif;
 }
 
+h1 {
+  font-size: 48pt;
+  color: #e70800;
+}
+
+h2 {
+  font-size: 24pt;
+  margin-left: 10px;
+}
+
+h3 {
+  font-size: 24pt;
+  color: #e70800;
+}
+
+h4 {
+  font-size: 20pt;
+  color: #e70800;
+}
+
+
+div {
+  margin: 20px;
+}
+
+p {
+  margin: 20px;
+  font-size: 12pt;
+}
+
+.small_caps {
+  font-variant: small-caps;
+}
+
+.terminal, .editor {
+  font-family: monospace;
+  font-size: 10pt;
+  color: white;
+  background-color: black;
+  padding: 1px;
+}
+
+#side_bar {
+  width: 250px;
+  position: absolute;
+  left: 800px;
+  border: 1px solid black;
+  background-color: #ebebeb;
+  margin: 0;
+}
+
+#download_button div {
+  font-size: 16pt;
+  color: white;
+  background-color: #e70800;
+  padding: 10px;
+  margin: 0px;
+  width: 100%;
+}
+
+#navigation {
+  font-size: 16pt;
+  background-color: #ebebeb;
+}
+
+#main_content {
+  width: 800px;
+  padding: 20px;
+  margin: 0;
+  border: 1px solid black;
+}
+
 #main_content a {
   color: #e70800;
 }
+
+#introduction p {
+  font-size: 16pt;
+  line-height: 20pt;
+  margin-bottom: 150px;
+}
+
