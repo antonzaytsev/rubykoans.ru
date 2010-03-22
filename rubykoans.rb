@@ -9,3 +9,7 @@ end
 get '/' do
   haml :index
 end
+
+get '/windows' do
+  haml :windows
+end

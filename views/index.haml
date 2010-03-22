@@ -1,20 +1,29 @@
 #side_bar
 
-  #download_button
-    %div.small_caps
-      download the koans
+  %a#download_button.small_caps{ :href => '#' }download the koans
 
   #navigation
 
-  %ol.small_caps
-    %li introduction
-    %li the structure
-    %li installing ruby
-    %li what editors can i use?
-    %li the path to enlightenment
-    %li authors
-    %li inspiration
-    %li other resources
+    %a.small_caps.tab.active *nix
+    %a.small_caps.tab{ :href => '/windows' }windows
+    
+    %ol.small_caps
+      %li
+        %a{ :href => '#introduction' }introduction
+      %li 
+        %a{ :href => '#the_structure' }the structure
+      %li
+        %a{ :href => '#installing_ruby' }installing ruby
+      %li 
+        %a{ :href => '#what_editors' }what editors can i use?
+      %li 
+        %a{ :href => '#the_path' }the path to enlightenment
+      %li 
+        %a{ :href => '#authors' }authors
+      %li 
+        %a{ :href => '#inspiration' }inspiration
+      %li 
+        %a{ :href => '#other_resources' }other resources
 
 #main_content
 
@@ -23,13 +32,24 @@
     %h2.small_caps with the edgecase ruby koans
     %p The Koans walk you along the path to enlightenment in order to learn Ruby. The goal is to learn the Ruby language, syntax, structure, and some common functions and libraries. We also teach you culture. Testing is not just something we pay lip service to, but something we live. It is essential in your quest to learn and do great things in the language.
 
+  #the_structure
+    %h3 The Structure
+    %p The koans are broken out into areas by file, hashes are covered in about_hashes.rb, modules are introduced in about_modules.rb, etc. They are presented in order in the path_to_enlightenment.rb file.
+    %p Each koan builds up your knowledge of Ruby and builds upon itself. It will stop at the first place you need to correct.
+    %p Some koans simply need to have the correct answer substituted for an incorrect one. Some, however, require you to supply your own answer. If you see the method __ (a double underscore) listed, it is a hint to you to supply your own code in order to make it work correctly.  
+  
   #installing_ruby
     %h3 Installing Ruby
     %p.small_caps
       these instructions are for *nix platforms. 
       %br/
-      we also have windows instructions.
-    %p In order to run the koans you need Ruby installed. If you do not already have Ruby setup, please visit http://ruby-lang.org/en/downloads for operating system specific instructions.
+      we also have 
+      %a{:href => '/windows'} windows instructions
+      \.
+    %p 
+      In order to run the koans you need Ruby installed. If you do not already have Ruby setup, please visit 
+      %a{ :href => 'http://ruby-lang.org/en/downloads', :rel => 'external' } http://ruby-lang.org/en/downloads 
+      for operating system specific instructions.
     %p To verify your installation, in your terminal window simply type:
     %div.terminal
       %p $ ruby --version
@@ -38,9 +58,11 @@
   #what_editors
     %h3 What Editors Can I Use?
     %p.small_caps
-      these suggestions are for *nix platforms. 
+      these instructions are for *nix platforms. 
       %br/
-      we also have windows suggestions.
+      we also have 
+      %a{:href => '/windows.html'} windows instructions
+      \.
     %p You can really use any editor you'd like, but here are some suggestions:
     %ul
       %li Emacs
@@ -54,7 +76,9 @@
     %p.small_caps
       these instructions are for *nix platforms. 
       %br/
-      we also have windows instructions.
+      we also have 
+      %a{:href => '/windows.html'} windows instructions
+      \.
     %p You can run the tests by calling the path_to_englightenment.rb file.
     %p In your terminal, while in the ruby_koans directory, type:
     %div.terminal 
@@ -103,7 +127,7 @@
           %br/
           def test_assert_truth
           %br/
-          assert false  # This should be true
+          &nbsp;&nbsp;assert false  # This should be true
           %br/
           end
       %p You then change false to true and run the tests again. You should get a new error.
@@ -112,18 +136,19 @@
 
   #authors
     %h3 Authors
-    %p 
+    %p
       Jim Weirich  
       %br/
       &lt;jim@weirichhouse.org&gt;
       %br/
       @jimweirich
-    %p 
+    %p
       Joe O'Brien
       %br/
       &lt;joe@edgecase.com&gt;
       %br/
       @objo
+    %br.clear
 
   #inspiration
     %h3 Inspiration
