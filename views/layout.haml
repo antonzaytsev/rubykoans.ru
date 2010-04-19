@@ -13,4 +13,5 @@
     %script{ :type => 'text/javascript' } try{ Typekit.load(); } catch(e){ }
   %body  
     = haml :sidebar, :layout => false
-    = yield
+    #main_content
+      = yield

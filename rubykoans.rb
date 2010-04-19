@@ -7,9 +7,11 @@ not_found do
 end
 
 get '/' do
+  @page = 'nix'
   haml :index
 end
 
 get '/windows' do
+  @page = 'windows'
   haml :windows
 end

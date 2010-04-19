@@ -3,8 +3,8 @@
 
   #navigation
 
-    %a.tab.active *nix
-    %a.tab{ :href => '/windows' }windows
+    %a.tab{ :class => ('active' if @page == 'nix' ),    :href => '/' } *nix
+    %a.tab{ :class => ('active' if @page == 'windows'), :href => '/windows' } windows
     
     %ol
       %li
