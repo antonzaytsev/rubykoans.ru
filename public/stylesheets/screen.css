@@ -144,6 +144,10 @@ h3 { font-size: 20px; margin-top: 40px; }
   margin-left: 20px;
 }
 
+#main_content ul li {
+  margin-bottom: 0.5em;
+}
+
 #main_content p {
   margin: 20px 0 20px 20px;
   font-size: 18px;
@@ -193,7 +197,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   display: block;
   margin: 10px 0 0 10px;
   color: #333;
-  font-size: 21px;
+  font-size: 19px;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
