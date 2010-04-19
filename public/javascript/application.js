@@ -12,9 +12,9 @@ $(function(){
 
   $('#navigation ol a').click(function(e) {
     var section = $($(this).attr('href'));
-    var scroll = section.offset().top - 100;
-    $('html,body').css({scrollTop: scroll});
-    //e.preventDefault();
+    var scroll = section.offset().top - 50;
+    $('html,body').animate({scrollTop: scroll});
+    e.preventDefault();
   });
 
   $('.email_address').each(function() {
