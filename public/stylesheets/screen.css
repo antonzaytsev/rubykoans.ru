@@ -1,52 +1,56 @@
 body {
-  border-top: 4px solid #e70800;
-  font-family: "sorts-mill-goudy-1","sorts-mill-goudy-2",serif;
-  -webkit-text-stroke:1px transparent; }
+  font-family: 'sorts-mill-goudy-1','sorts-mill-goudy-2',serif;
+  -webkit-text-stroke: 1px transparent;
+  background: #fff;
+}
+
+#top_line {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: #e70800;
+}
 
 @media only screen and (max-device-width:480px) {body{-webkit-text-stroke:0 black;}}
 
-h1 {
-  font-size: 48px;
-  color: #e70800;
-}
+h1, h2, h3 { color: #e70800; }
 
-h3 {
-  font-size: 24pt;
-  color: #e70800;
-}
+h1 { font-size: 48px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; margin-top: 40px; }
 
-h4 {
-  font-size: 20pt;
-  color: #e70800;
-  margin-top: 40px;
-}
+.small_caps { text-transform: uppercase; }
 
-.small_caps {
-  text-transform: uppercase;
-}
+.clear { clear: both; height: 0; }
 
-#side_bar {
-  width: 250px;
+
+
+/*-- Sidebar
+----------------------------------------------------------*/
+
+#sidebar {
   position: fixed;
   left: 800px;
   top: 60px;
-  border: 0px solid black;
-  background-color: none;
-  margin: 0;
+  width: 280px;
 }
 
 #download_button {
   display: block;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  background-color: none;
-  padding: 0px;
-  margin-bottom: 30px;
   width: 250px;
   height: 40px;
-  line-height: 44px;
+  margin: 0 auto 30px auto;
+  padding: 0px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 42px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #d00;
   background-image: -moz-linear-gradient(top, #fb9d9d, #e70800); /* FF3.6 */
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #e70800),color-stop(1, #fb9d9d)); /* Saf4+, Chrome */
             filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#e70800', endColorstr='#fb9d9d'); /* IE6,IE7 */
@@ -63,21 +67,23 @@ h4 {
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9d9d', endColorstr='#e70800')"; /* IE8 */
 }
 
-
 #navigation {
+  width: 250px;
+  margin: 0 auto;
   font-size: 12px;
   line-height: 26px;
+  text-transform: uppercase;
 }
 
 #navigation ol {
+  clear: left;
   list-style-position: outside;
   padding-left: 20px;
   background-color: #ebebeb;
-  clear: left;
-  -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft      : 5px;
+  -moz-border-radius-bottomright     : 5px;
+  -webkit-border-bottom-left-radius  : 5px;
+  -webkit-border-bottom-right-radius : 5px;
 }
 
 #navigation li {
@@ -86,82 +92,69 @@ h4 {
   font-size: 14px;
 }
 
-#navigation li:last-child {
-  border-bottom: 0;
-}
+#navigation li:last-child { border-bottom: 0; }
 
 #navigation a {
-  text-decoration: none;
+  display: block;
   color: black;
   font-size: 11px;
+  text-decoration: none;
 }
 
 #navigation a.tab {
   float: left;
-  display: block;
   width: 115px;
-  height: 24px;
+  height: 28px;
   padding-left: 10px;
   color: #e70800;
   font-size: 14px;
-  line-height: 28px;
+  line-height: 32px;
   background-color: #f5f5f5;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft      : 5px;
+  -moz-border-radius-topright     : 5px;
+  -webkit-border-top-left-radius  : 5px;
+  -webkit-border-top-right-radius : 5px;
 }
 
-#navigation a.tab.active {
-  background-color: #ebebeb;
-}
+#navigation a.tab.active { background-color: #ebebeb; }
+
+
+
+/*-- Main Content
+----------------------------------------------------------*/
 
 #main_content {
   width: 600px;
-  padding: 60px;
   margin: 0;
+  padding: 36px 60px 60px 60px;
 }
 
-#main_content a {
-  color: #e70800;}
+#main_content section {
+  display: block;
+  margin-bottom: 75px;
+}
+
+#main_content section div { margin: 20px 0 20px 20px; }
+
+#main_content a { color: #e70800; }
+
+#main_content ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 20px;
+}
 
 #main_content p {
   margin: 20px 0 20px 20px;
   font-size: 18px;
   line-height: 28px;
   text-align: justify;
-
 }
 
-#main_content p.small_caps {
+#main_content p.instructions_message {
   font-size: 14px;
   line-height: 24px;
-}
-
-#main_content h2.small_caps {
-  font-size: 16px;
-  letter-spacing: 3px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-#introduction p {
-  color: #3b3b3b;
-  width: 600px;
-  margin: 30px;
-  font-size: 20px;
-  line-height: 35px;
-  margin-bottom: 150px;
-  text-align: justify;
-}
-
-#the_structure, #installing_ruby, #what_editors, #the_path, #authors, #inspiration, #other_resources {
-  padding-top 60px;
-  margin-bottom: 150px;
-}
-
-#the_structure div, #installing_ruby div, #what_editors div, #the_path div, #authors div, #inspiration div, #other_resources div {
-  margin: 20px 0 20px 20px;
+  text-transform: uppercase;
 }
 
 .terminal, .editor {
@@ -171,27 +164,77 @@ h4 {
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000),color-stop(1, #444)); /* Saf4+, Chrome */
             filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#444'); /* IE6,IE7 */
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#444')"; /* IE8 */
-  
 }
 
 #main_content .terminal p, #main_content .editor p {
+  color: #fff;
   font-family: monaco, monospace;
   font-size: 14px;
-  color: white;
 }
 
-#main_content ul {
-  margin-left: 20px;
-  list-style-type: circle;
-  list-style-position: inside;
+
+
+/*-- Introduction Section
+----------------------------------------------------------*/
+
+#main_content #introduction {
+  width: 690px;
+  margin-bottom: 44px;
+  padding-bottom: 106px;
+  background: url(/images/enso.gif) no-repeat 100% 0;
 }
 
-#authors p {
+#main_content #introduction h1 {
+  margin-bottom: 30px;
+  padding-top: 24px;
+}
+
+#main_content #introduction h1 span {
+  display: block;
+  margin: 10px 0 0 10px;
+  color: #333;
+  font-size: 21px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#main_content #introduction p {
+  width: 570px;
+  margin-left: 30px;
+  color: #3b3b3b;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: justify;
+}
+
+
+
+/*-- Authors Section
+----------------------------------------------------------*/
+
+#main_content #authors p {
   float: left;
   width: 275px;
 }
 
-.clear {
-  clear: both;
-  height: 0;
+
+
+/*-- Other Resources Section
+----------------------------------------------------------*/
+
+#main_content #other_resources { margin-bottom: 0; }
+
+
+
+/*-- Inspiration & Other Resources Section
+----------------------------------------------------------*/
+
+#main_content #inspiration p a,
+#main_content #other_resources p a { line-height: 16px; }
+
+#main_content #other_resources a span,
+#main_content #inspiration a span {
+  display: block;
+  color: #555;
+  font-style: italic;
 }

@@ -12,4 +12,5 @@
     %script{ :type => 'text/javascript', :src => 'http://use.typekit.com/cgm5bbs.js' }
     %script{ :type => 'text/javascript' } try{ Typekit.load(); } catch(e){ }
   %body  
+    = haml :sidebar, :layout => false
     = yield

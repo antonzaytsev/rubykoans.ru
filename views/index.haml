@@ -1,48 +1,22 @@
-#side_bar
-
-  %a#download_button.small_caps{ :href => '#' }download the koans
-
-  #navigation
-
-    %a.small_caps.tab.active *nix
-    %a.small_caps.tab{ :href => '/windows' }windows
-    
-    %ol.small_caps
-      %li
-        %a{ :href => '#introduction' }introduction
-      %li 
-        %a{ :href => '#the_structure' }the structure
-      %li
-        %a{ :href => '#installing_ruby' }installing ruby
-      %li 
-        %a{ :href => '#what_editors' }what editors can i use?
-      %li 
-        %a{ :href => '#the_path' }the path to enlightenment
-      %li 
-        %a{ :href => '#authors' }authors
-      %li 
-        %a{ :href => '#inspiration' }inspiration
-      %li 
-        %a{ :href => '#other_resources' }other resources
-
 #main_content
 
-  #introduction
-    %h1 Learning Ruby
-    %h2.small_caps with the edgecase ruby koans
+  %section#introduction
+    %h1
+      Learning Ruby
+      %span With the Edgecase Ruby Koans
     %p The Koans walk you along the path to enlightenment in order to learn Ruby. The goal is to learn the Ruby language, syntax, structure, and some common functions and libraries. We also teach you culture. Testing is not just something we pay lip service to, but something we live. It is essential in your quest to learn and do great things in the language.
 
-  #the_structure
-    %h3 The Structure
+  %section#the_structure
+    %h2 The Structure
     %p The koans are broken out into areas by file, hashes are covered in about_hashes.rb, modules are introduced in about_modules.rb, etc. They are presented in order in the path_to_enlightenment.rb file.
     %p Each koan builds up your knowledge of Ruby and builds upon itself. It will stop at the first place you need to correct.
     %p Some koans simply need to have the correct answer substituted for an incorrect one. Some, however, require you to supply your own answer. If you see the method __ (a double underscore) listed, it is a hint to you to supply your own code in order to make it work correctly.  
   
-  #installing_ruby
-    %h3 Installing Ruby
-    %p.small_caps
+  %section#installing_ruby
+    %h2 Installing Ruby
+    %p.instructions_message
       these instructions are for *nix platforms. 
-      %br/
+      %br
       we also have 
       %a{:href => '/windows'} windows instructions
       \.
@@ -55,11 +29,11 @@
       %p $ ruby --version
     %p Any response for Ruby with a version number greater than 1.8 is fine.
 
-  #what_editors
-    %h3 What Editors Can I Use?
-    %p.small_caps
+  %section#what_editors
+    %h2 What Editors Can I Use?
+    %p.instructions_message
       these instructions are for *nix platforms. 
-      %br/
+      %br
       we also have 
       %a{:href => '/windows.html'} windows instructions
       \.
@@ -71,11 +45,11 @@
       %li RubyMine
       %li jEdit
 
-  #the_path
-    %h3 The Path to Enlightenment
-    %p.small_caps
+  %section#the_path
+    %h2 The Path to Enlightenment
+    %p.instructions_message
       these instructions are for *nix platforms. 
-      %br/
+      %br
       we also have 
       %a{:href => '/windows.html'} windows instructions
       \.
@@ -85,30 +59,30 @@
       %p [ ruby_koans ] $ ruby path_to_enlightenment.rb
 
     #red_green_refactor
-      %h4 Red, Green, Refactor
+      %h3 Red, Green, Refactor
       %p In test-driven development (TDD) the mantra has always been red: write a failing test and run it, green: make the test pass, and refactor: look at the code and see if you can make it any better. 
       %p With the koans, you will need to run the tests and see it fail (red), make the test pass (green), then take a moment and reflect upon the test to see what it is teaching you and improve the code to better communicate its intent (refactor).
       %p The very first time you run it you will see the following output:
       %div.terminal 
         %p 
           [ ruby_koans ] $ ruby path_to_enlightenment.rb
-          %br/
+          %br
           (in /Users/person/dev/ruby_koans)
-          %br/
+          %br
           cd koans
         %p 
           Thinking AboutAsserts
-          %br/
+          %br
           test_assert_truth has damaged your karma.
         %p 
           You have not yet reached enlightenment ...
-          %br/
+          %br
           <false> is not true.
         %p 
           Please meditate on the following code:
-          %br/
+          %br
           \./about_asserts.rb:10:in `test_assert_truth'
-          %br/
+          %br
           path_to_enlightenment.rb:27
         %p 
           mountains are merely mountains
@@ -116,88 +90,79 @@
       %div.terminal 
         %p 
           Please meditate on the following code:
-          %br/
+          %br
           \./about_asserts.rb:10:in `test_assert_truth'
-          %br/
+          %br
           path_to_enlightenment.rb:27
       %p You then open up the about_asserts.rb file in your text editor and look at line 10:
       %div.editor
         %p 
           \# We shall contemplate truth by testing reality, via asserts.
-          %br/
+          %br
           def test_assert_truth
-          %br/
+          %br
           &nbsp;&nbsp;assert false  # This should be true
-          %br/
+          %br
           end
       %p You then change false to true and run the tests again. You should get a new error.
       %p Before moving on, think about what you are learning. 
       %p In this specific case, ignore everything except the method name (test_assert_truth) and the parts inside the method (everything before the end). The goal is for you to see that if you pass a value to the assert method, it will either ensure it is true and continue on, or fail if in fact the statement is false.
 
-  #authors
-    %h3 Authors
+  %section#authors
+    %h2 Authors
     %p
       Jim Weirich  
-      %br/
-      &lt;jim@weirichhouse.org&gt;
-      %br/
-      @jimweirich
+      %br
+      %span.email_address jim [at] weirichhouse [dot] org
+      %br
+      %a{ :href => 'http://twitter.com/jimweirich', :rel => 'external' } @jimweirich
     %p
       Joe O'Brien
-      %br/
-      &lt;joe@edgecase.com&gt;
-      %br/
-      @objo
+      %br
+      %span.email_address joe [at] edgecase [dot] com
+      %br
+      %a{ :href => 'http://twitter.com/objo', :rel => 'external' } @objo
     %br.clear
 
-  #inspiration
-    %h3 Inspiration
+  %section#inspiration
+    %h2 Inspiration
     %p A special thanks to Mike Clark and Ara Howard for inspiring this project. Mike Clark wrote an excellent blog post about learning Ruby through unit testing. This sparked an idea that has taken a bit to solidify, that of bringing new rubyists into the community through testing. Ara Howard then gave us the idea for the Koans in his ruby quiz entry on Meta Koans (a must for any rubyist wanting to improve their skills). Also, "The Little Lisper" taught us all the value of the short questions/simple answers style of learning.
     %p 
       %a{:href => 'http://clarkware.com/cgi/blosxom/2005/03/18', :rel => 'external'}
         Mike Clark's post
-      %br/
-      clarkware.com/cgi/blosxom/2005/03/18
+        %span clarkware.com/cgi/blosxom/2005/03/18
     %p 
       %a{:href => 'http://rubyquiz.com/quiz67.html', :rel => 'external'}
         Meta Koans
-      %br/
-      rubyquiz.com/quiz67.html
+        %span rubyquiz.com/quiz67.html
     %p
       %a{:href => 'http://amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632', :rel => 'external'}
         The Little Lisper
-      %br/
-      amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632
+        %span amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632
 
-  #other_resources
-    %h3 Other Resources
+  %section#other_resources
+    %h2 Other Resources
     %p
       %a{:href => 'http://pivotaltracker.com/projects/48111', :rel => 'external'}
         EdgeCase Ruby Koans Issue Tracker
-      %br/
-      pivotaltracker.com/projects/48111
+        %span pivotaltracker.com/projects/48111
     %p
       %a{:href => 'http://github.com/edgecase/ruby_koans', :rel => 'external'}
         EdgeCase Ruby Koans on Github
-      %br/
-      github.com/edgecase/ruby_koans
+        %span github.com/edgecase/ruby_koans
     %p
       %a{:href => 'http://ruby-lang.org', :rel => 'external'}
         The Ruby Language
-      %br/
-      ruby-lang.org
+        %span ruby-lang.org
     %p 
       %a{:href => 'http://tryruby.org', :rel => 'external'}
         Try Ruby in your browser
-      %br/
-      tryruby.org
+        %span tryruby.org
     %p 
       %a{:href => 'http://pragprog.com/titles/ruby/programming-ruby', :rel => 'external'}
         Dave Thomas' introduction to Ruby Programming
-      %br/
-      pragprog.com/titles/ruby/programming-ruby
+        %span pragprog.com/titles/ruby/programming-ruby
     %p
       %a{:href => 'http://pragprog.com/titles/bmsft/everyday-scripting-with-ruby', :rel => 'external'}
         Brian Marick's fantastic guide for beginners: Everyday Scripting with Ruby	
-      %br/
-      pragprog.com/titles/bmsft/everyday-scripting-with-ruby
+        %span pragprog.com/titles/bmsft/everyday-scripting-with-ruby
