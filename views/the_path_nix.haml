@@ -1,0 +1,61 @@
+%section#the_path
+  %h2 The Path to Enlightenment
+  %p.instructions_message
+    These instructions are for *nix platforms. We also have 
+    %a{:href => '/windows.html'} Windows instructions
+    \.
+  %p You can run the tests by calling the path_to_englightenment.rb file.
+  %p In your terminal, while in the ruby_koans directory, type:
+  %div.terminal 
+    %p [ ruby_koans ] $ ruby path_to_enlightenment.rb
+
+  #red_green_refactor
+    %h3 Red, Green, Refactor
+    %p In test-driven development (TDD) the mantra has always been red: write a failing test and run it, green: make the test pass, and refactor: look at the code and see if you can make it any better. 
+    %p With the koans, you will need to run the tests and see it fail (red), make the test pass (green), then take a moment and reflect upon the test to see what it is teaching you and improve the code to better communicate its intent (refactor).
+    %p The very first time you run it you will see the following output:
+    %div.terminal 
+      %p 
+        [ ruby_koans ] $ ruby path_to_enlightenment.rb
+        %br
+        (in /Users/person/dev/ruby_koans)
+        %br
+        cd koans
+      %p 
+        Thinking AboutAsserts
+        %br
+        test_assert_truth has damaged your karma.
+      %p 
+        You have not yet reached enlightenment ...
+        %br
+        &lt;false&gt; is not true.
+      %p 
+        Please meditate on the following code:
+        %br
+        \./about_asserts.rb:10:in `test_assert_truth'
+        %br
+        path_to_enlightenment.rb:27
+      %p 
+        mountains are merely mountains
+    %p You have come to the first error. Notice you are told where to look for the error:
+    %div.terminal 
+      %p 
+        Please meditate on the following code:
+        %br
+        \./about_asserts.rb:10:in `test_assert_truth'
+        %br
+        path_to_enlightenment.rb:27
+    %p You then open up the about_asserts.rb file in your text editor and look at line 10:
+    %div.editor
+      %p 
+        \# We shall contemplate truth by testing reality, via asserts.
+        %br
+        def test_assert_truth
+        %br
+        &nbsp;&nbsp;assert false  # This should be true
+        %br
+        end
+    %p You then change false to true and run the tests again. You should get a new error.
+    %p Before moving on, think about what you are learning. 
+    %p In this specific case, ignore everything except the method name (test_assert_truth) and the parts inside the method (everything before the end). The goal is for you to see that if you pass a value to the assert method, it will either ensure it is true and continue on, or fail if in fact the statement is false.
+
