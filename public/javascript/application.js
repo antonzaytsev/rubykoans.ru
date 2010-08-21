@@ -1,5 +1,7 @@
 $(function(){
 
+  // IE FIX for HTML5
+  document.createElement('nav');
   document.createElement('header');
   document.createElement('section');
 
@@ -11,11 +13,11 @@ $(function(){
     newWindow = null;
   });
 
-  $('#navigation ol a').click(function(e) {
-    var section = $($(this).attr('href'));
-    var scroll = section.offset().top - 50;
-    $('html,body').animate({scrollTop: scroll});
+  $('#sidebar ol a').click(function(e) {
     e.preventDefault();
+    var targetSection = $($(this).attr('href'));
+    var scrollTo      = targetSection.offset().top;
+    $('html,body').animate({scrollTop: scrollTo});
   });
 
   $('.email_address').each(function() {

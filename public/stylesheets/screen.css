@@ -18,7 +18,7 @@ body {
 h1, h2, h3 { color: #e70800; }
 
 h1 { font-size: 48px; }
-h2 { font-size: 24px; }
+h2 { font-size: 28px; }
 h3 { font-size: 20px; margin-top: 40px; }
 
 .clear { clear: both; height: 0; }
@@ -42,7 +42,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   margin: 0 auto 30px auto;
   padding: 0px;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 42px;
   text-align: center;
@@ -65,7 +65,7 @@ h3 { font-size: 20px; margin-top: 40px; }
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FB746F', endColorstr='#d00')"; /* IE8 */
 }
 
-#navigation {
+#sidebar nav {
   width: 250px;
   margin: 0 auto;
   font-size: 12px;
@@ -73,7 +73,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   text-transform: uppercase;
 }
 
-#navigation ol {
+#sidebar nav ol {
   clear: left;
   list-style-position: outside;
   padding: 7px 12px 5px 20px;
@@ -84,22 +84,22 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-bottom-right-radius : 5px;
 }
 
-#navigation li {
+#sidebar nav li {
   margin-left: 10px;
   border-bottom: 1px solid #ccc;
   font-size: 13px;
 }
 
-#navigation li:last-child { border-bottom: 0; }
+#sidebar nav li:last-child { border-bottom: 0; }
 
-#navigation a {
+#sidebar nav a {
   display: block;
   color: black;
   font-size: 11px;
   text-decoration: none;
 }
 
-#navigation a.tab {
+#sidebar nav a.tab {
   float: left;
   width: 115px;
   height: 28px;
@@ -114,7 +114,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-top-right-radius : 5px;
 }
 
-#navigation a.tab.active { background-color: #ebebeb; }
+#sidebar nav a.tab.active { background-color: #ebebeb; }
 
 
 
@@ -129,7 +129,8 @@ h3 { font-size: 20px; margin-top: 40px; }
 
 #main_content section {
   display: block;
-  margin-bottom: 85px;
+  margin-bottom: 35px;
+  padding-top: 50px;
 }
 
 #main_content section div { margin: 20px 0; }
@@ -186,6 +187,7 @@ h3 { font-size: 20px; margin-top: 40px; }
 #main_content #introduction {
   width: 690px;
   margin-bottom: 20px;
+  padding-top: 0;
   padding-bottom: 106px;
   background: url(/images/enso.gif) no-repeat 100% 0;
 }

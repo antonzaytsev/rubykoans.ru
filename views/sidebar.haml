@@ -1,7 +1,7 @@
 #sidebar
   %a#download_button{ :href => 'http://github.com/downloads/edgecase/ruby_koans/rubykoans.zip' }download the koans
 
-  #navigation
+  %nav
 
     %a.tab{ :class => ('active' if @page == 'nix' ),    :href => '/' } *nix
     %a.tab{ :class => ('active' if @page == 'windows'), :href => '/windows' } windows
