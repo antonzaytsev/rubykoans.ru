@@ -22,7 +22,7 @@ end
 get '/windows' do
   @page = 'windows'
   @editors = [
-    {:name => 'E Text Editor', :url => 'http://code.google.com/p/macvim'},
+    {:name => 'E Text Editor', :url => 'http://www.e-texteditor.com'},
     {:name => 'RubyMine',      :url => 'http://www.jetbrains.com/ruby'},
     {:name => 'jEdit',         :url => 'http://www.jedit.org'},
   ]
