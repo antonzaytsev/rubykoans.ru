@@ -1,3 +1,11 @@
+function iPhone() {
+  if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+     return true;
+  } else {
+    return false;
+  }
+}
+
 $(function(){
 
   // IE FIX for HTML5
@@ -14,6 +22,8 @@ $(function(){
   });
 
   $('#sidebar ol a').click(function(e) {
+    if(iPhone()) { return; }
+
     e.preventDefault();
     var targetSection = $($(this).attr('href'));
     var scrollTo      = targetSection.offset().top;
