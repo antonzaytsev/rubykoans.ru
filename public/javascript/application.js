@@ -1,9 +1,5 @@
 function iPhone() {
-  if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-     return true;
-  } else {
-    return false;
-  }
+  return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i));
 }
 
 $(function(){
@@ -31,10 +27,18 @@ $(function(){
   });
 
   $('.email_address').each(function() {
-    var address     = $(this).text().replace(' [at] ', '@').replace(' [dot] ', '.');
-    var emailLink   = '<a href="mailto:' + address + '">' + address + '</a>';
+    var address   = $(this).text().replace(' [at] ', '@').replace(' [dot] ', '.');
+    var emailLink = '<a href="mailto:' + address + '">' + address + '</a>';
 
-    $(this).empty().append(emailLink);
+    $(this).replaceWith(emailLink);
+  });
+
+  $('#edgecase_bw').before("<img src='/images/edgecase_logo.gif' id='edgecase_color' alt='EdgeCase'>");
+
+  $('#edgecase_logo').hover(function() {
+    $('#edgecase_bw').stop().fadeOut(200);
+  }, function() {
+    $('#edgecase_bw').stop().fadeIn(200);
   });
 
 });
