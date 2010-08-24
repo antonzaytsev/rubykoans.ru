@@ -1,24 +1,21 @@
 body {
-  font-family: 'sorts-mill-goudy-1','sorts-mill-goudy-2',serif;
-  background: #fff;
-  -webkit-text-stroke: 1px transparent;
+  font-family : 'sorts-mill-goudy-1','sorts-mill-goudy-2', serif;
+  background  : #fff;
 }
 
-@media only screen and (max-device-width:480px) {body{-webkit-text-stroke:0 black;}}
-
 #top_line {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 4px;
-  background: #e70800;
+  position   : fixed;
+  top        : 0;
+  right      : 0;
+  left       : 0;
+  height     : 4px;
+  background : #e70800;
 }
 
 h1, h2, h3 { color: #e70800; }
-
 h1 { font-size: 58px; }
-h2 { font-size: 28px; }
+h2 { font-size: 28px; background: url(/images/header_line.gif) repeat-x 0 50%; }
+h2 span { background: #fff; padding-right: 12px; }
 h3 { font-size: 20px; margin-top: 40px; }
 
 .clear { clear: both; height: 0; }
@@ -29,63 +26,60 @@ h3 { font-size: 20px; margin-top: 40px; }
 ----------------------------------------------------------*/
 
 #sidebar {
-  position: fixed;
-  left: 800px;
-  top: 30px;
-  width: 250px;
+  position : fixed;
+  left     : 800px;
+  top      : 30px;
+  width    : 250px;
 }
 
 #edgecase_logo {
-  display: block;
-  margin-top: 30px; 
-  text-align: center;
-  opacity: 0.7;
+  display    : block;
+  margin-top : 30px; 
+  text-align : center;
+  opacity    : 0.7;
   transition         : opacity 0.1s linear;
   -moz-transition    : opacity 0.1s linear;
   -webkit-transition : opacity 0.1s linear;
   -o-transition      : opacity 0.1s linear;
 }
 
-#edgecase_logo:hover {
-  opacity: 1.0;
-}
+#edgecase_logo:hover { opacity: 1.0; } 
 
 #main_content #download_button {
-  display: block;
-  width: 250px;
-  height: 40px;
-  margin: 0 auto 30px auto;
-  padding: 0px;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 42px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
+  display : block;
+  height  : 40px;
+  margin  : 0 auto 30px auto;
+  padding : 0px;
+  color   : #fff;
+  font-size       : 14px;
+  letter-spacing  : 1px;
+  line-height     : 42px;
+  text-align      : center;
+  text-decoration : none;
+  text-transform  : uppercase;
   background-color: #d00;
   background-image: -moz-linear-gradient(top, #FB746F, #d00); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #d00),color-stop(1, #FB746F)); /* Saf4+, Chrome */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #d00),color-stop(1, #FB746F));
             filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#d00', endColorstr='#FB746F'); /* IE6,IE7 */
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d00', endColorstr='#FB746F')"; /* IE8 */
-     -moz-border-radius: 5px; /* FF1+ */
-  -webkit-border-radius: 5px; /* Saf3+, Chrome */
-          border-radius: 5px; /* Opera 10.5, IE 9 */
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
-#download_button:active{
-  background-image: -moz-linear-gradient(top, #d00, #FB746F); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #FB746F),color-stop(1, #d00)); /* Saf4+, Chrome */
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FB746F', endColorstr='#d00'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FB746F', endColorstr='#d00')"; /* IE8 */
+#main_content #download_button:active {
+  background-image: -moz-linear-gradient(top, #d00, #E15C56); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #E15C56),color-stop(1, #d00));
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#d00'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#d00')"; /* IE8 */
 }
 
 #sidebar nav {
-  width: 250px;
-  margin: 0 auto;
-  font-size: 12px;
-  line-height: 26px;
-  text-transform: uppercase;
+  width  : 250px;
+  margin : 0 auto;
+  font-size      : 12px;
+  line-height    : 26px;
+  text-transform : uppercase;
 }
 
 #sidebar nav ol {
@@ -137,12 +131,13 @@ h3 { font-size: 20px; margin-top: 40px; }
 ----------------------------------------------------------*/
 
 #main_content {
-  width: 600px;
-  margin: 0;
-  padding: 36px 60px 60px 60px;
+  width   : 600px;
+  margin  : 0;
+  padding : 36px 60px 60px 60px;
 }
 
 #main_content section {
+  clear: both;
   display: block;
   margin-bottom: 35px;
   padding-top: 50px;
@@ -162,19 +157,18 @@ h3 { font-size: 20px; margin-top: 40px; }
 #main_content ol li { margin-bottom: 0.5em; }
 
 #main_content p {
-  margin: 20px 0;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: justify;
+  margin      : 20px 0;
+  font-size   : 18px;
+  line-height : 25px;
 }
 
 #main_content p.instructions_message {
-  margin-top: 0;
-  margin-left: 0;
-  color: #666;
-  font-size: 14px;
-  font-style: italic;
-  line-height: 24px;
+  margin-top  : 0;
+  margin-left : 0;
+  color       : #666;
+  font-size   : 14px;
+  font-style  : italic;
+  line-height : 24px;
 }
 
 #main_content p.instructions_message a { color: #f54d47; }
@@ -189,10 +183,10 @@ h3 { font-size: 20px; margin-top: 40px; }
 }
 
 #main_content .terminal p, #main_content .editor p {
-  margin: 10px 0;
-  color: #fff;
-  font-family: monaco, monospace;
-  font-size: 14px;
+  margin      : 10px 0;
+  color       : #fff;
+  font-family : monaco, monospace;
+  font-size   : 14px;
 }
 
 
@@ -201,33 +195,43 @@ h3 { font-size: 20px; margin-top: 40px; }
 ----------------------------------------------------------*/
 
 #main_content #introduction {
-  width: 690px;
-  margin-bottom: 20px;
-  padding-top: 0;
-  padding-bottom: 106px;
-  background: url(/images/enso.gif) no-repeat 100% 0;
+  width          : 690px;
+  margin-bottom  : 20px;
+  padding-top    : 0;
+  padding-bottom : 106px;
+  background     : url(/images/enso.gif) no-repeat 91% 0;
 }
 
 #main_content #introduction h1 {
-  margin-bottom: 45px;
-  padding-top: 24px;
+  margin-bottom : 45px;
+  padding-top   : 24px;
 }
 
 #main_content #introduction h1 span {
-  display: block;
-  margin: 10px 0 0 0;
-  color: #444;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  display   : block;
+  margin    : 10px 0 0 0;
+  color     : #444;
+  font-size : 16px;
+  letter-spacing : 3px;
+  text-transform : uppercase;
 }
 
 #main_content #introduction p {
-  width: 600px;
-  color: #3b3b3b;
-  font-size: 20px;
-  line-height: 35px;
-  text-align: justify;
+  width       : 600px;
+  color       : #555;
+  font-size   : 21px;
+  line-height : 35px;
+  text-align  : justify;
+}
+
+
+
+/*-- Structure Section
+----------------------------------------------------------*/
+
+#main_content #the_structure img {
+  float  : left;
+  margin : 20px 30px 30px 0;
 }
 
 
@@ -257,8 +261,8 @@ h3 { font-size: 20px; margin-top: 40px; }
 
 #main_content #other_resources a span,
 #main_content #inspiration a span {
-  display: block;
-  color: #555;
-  font-style: italic;
+  display    : block;
+  color      : #555;
+  font-style : italic;
   text-decoration: none;
 }

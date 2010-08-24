@@ -1,14 +1,12 @@
 %section#what_editors
-  %h2 What Editors Can I Use?
+  %h2 <span>What Editors Can I Use?</span>
   %p.instructions_message
     These instructions are for Windows. We also have 
     %a{:href => '/#what_editors'} *nix instructions
     \.
   %p You can really use any editor you'd like, but here are some suggestions:
+
   %ul
-    %li
-      %a{:href => 'http://www.e-texteditor.com/', :rel => 'external'} E Text Editor
-    %li 
-      %a{:href => 'http://www.jetbrains.com/ruby', :rel => 'external'} RubyMine
-    %li
-      %a{:href => 'http://www.jedit.org', :rel => 'external'} jEdit
+    - @editors.sort_by{rand}.each do |editor|
+      %li
+        = "<a href='#{editor[:url]}' rel='external'>#{editor[:name]}</a>"
