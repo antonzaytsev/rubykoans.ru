@@ -33,12 +33,18 @@ $(function(){
     $(this).replaceWith(emailLink);
   });
 
-  $('#edgecase_bw').before("<img src='/images/edgecase_logo.gif' id='edgecase_color' alt='EdgeCase'>");
+
+  var BWLogo = $('#edgecase_bw');
+  BWLogo.before("<img src='/images/edgecase_logo.gif' id='edgecase_color' alt='EdgeCase'>");
 
   $('#edgecase_logo').hover(function() {
-    $('#edgecase_bw').stop().fadeOut(200);
+    BWLogo.stop().fadeOut(200);
   }, function() {
-    $('#edgecase_bw').stop().fadeIn(200);
+    BWLogo.stop().fadeIn(200);
   });
+
+  var logo = document.getElementById('edgecase_logo');
+      logo.ontouchstart = function() { BWLogo.stop().fadeOut(200); }
+      logo.ontouchend   = function() { BWLogo.stop().fadeIn(200);  }
 
 });
