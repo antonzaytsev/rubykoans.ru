@@ -47,4 +47,39 @@ $(function(){
       logo.ontouchstart = function() { BWLogo.stop().fadeOut(200); }
       logo.ontouchend   = function() { BWLogo.stop().fadeIn(200);  }
 
+  function sectionPositions() {
+    var sections = [];
+    $('#main_content .koans_section').each(function(){
+        sections.push($(this).offset().top);
+    });
+
+    return sections;
+  };
+
+  function highlightSection(i) {
+    var sections = sectionPositions();
+
+    i > sections.length-1 ? i = sections.length-1 : "";
+
+    $('#sidebar ol li')
+      .css('font-weight', 'normal')
+      .eq(i).css('font-weight', 'bold');
+  }
+
+  function currentIndex() {
+    var currentPosition = $(window).scrollTop(),
+        i = 0;
+
+    while(currentPosition >  sectionPositions()[i]) {
+      i++;
+    }
+
+    return i;
+  }
+
+  highlightSection(currentIndex());
+
+  $(window).scroll(function() {
+    highlightSection(currentIndex());
+  });
 });
