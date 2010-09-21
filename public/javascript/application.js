@@ -54,7 +54,7 @@ $(function(){
   function highlightSection(i) {
     var sections = sectionPositions();
 
-    i > sections.length-1 ? i = sections.length-1 : "";
+    i > sections.length ? i = sections.length : "";
 
     $('#sidebar ol li')
       .css('font-weight', 'normal')
@@ -65,7 +65,7 @@ $(function(){
     var currentPosition = $(window).scrollTop(),
         i = 0;
 
-    while(currentPosition >  sectionPositions()[i]) {
+    while(currentPosition > sectionPositions()[i+1]) {
       i++;
     }
 
