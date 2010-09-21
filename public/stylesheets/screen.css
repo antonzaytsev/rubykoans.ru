@@ -63,9 +63,9 @@ h3 { font-size: 20px; margin-top: 40px; }
   text-transform  : uppercase;
   background-color: #d00;
   background-image: -moz-linear-gradient(top, #FB746F, #d00); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #d00),color-stop(1, #FB746F));
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#d00', endColorstr='#FB746F'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d00', endColorstr='#FB746F')"; /* IE8 */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #dd0000),color-stop(1, #FB746F));
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd0000', endColorstr='#FB746F'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd0000', endColorstr='#FB746F')"; /* IE8 */
      -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -73,9 +73,9 @@ h3 { font-size: 20px; margin-top: 40px; }
 
 #main_content #download_button:active {
   background-image: -moz-linear-gradient(top, #d00, #E15C56); /* FF3.6 */
-  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #E15C56),color-stop(1, #d00));
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#d00'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#d00')"; /* IE8 */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #E15C56),color-stop(1, #dd0000));
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#dd0000'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#dd0000')"; /* IE8 */
 }
 
 #sidebar #nav {
