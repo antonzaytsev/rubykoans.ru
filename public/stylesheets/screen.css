@@ -30,6 +30,8 @@ h3 { font-size: 20px; margin-top: 40px; }
   left     : 800px;
   top      : 30px;
   width    : 250px;
+  margin-bottom: 35px;
+  padding-top: 50px;
 }
 
 #edgecase_logo {
@@ -76,7 +78,7 @@ h3 { font-size: 20px; margin-top: 40px; }
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#d00')"; /* IE8 */
 }
 
-#sidebar nav {
+#sidebar #nav {
   width  : 250px;
   margin : 0 auto;
   font-size      : 12px;
@@ -84,7 +86,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   text-transform : uppercase;
 }
 
-#sidebar nav ol {
+#sidebar #nav ol {
   clear: left;
   list-style-position: outside;
   padding: 7px 12px 5px 20px;
@@ -95,22 +97,22 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-bottom-right-radius : 5px;
 }
 
-#main_content #sidebar nav li {
+#main_content #sidebar #nav li {
   margin: 0 0 0 10px;
   border-bottom: 1px solid #ccc;
   font-size: 13px;
 }
 
-#main_content #sidebar nav li:last-child { border-bottom: 0; }
+#main_content #sidebar #nav li:last-child { border-bottom: 0; }
 
-#sidebar nav a {
+#sidebar #nav a {
   display: block;
   color: black;
   font-size: 11px;
   text-decoration: none;
 }
 
-#sidebar nav a.tab {
+#sidebar #nav a.tab {
   float: left;
   width: 115px;
   height: 28px;
@@ -125,7 +127,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-top-right-radius : 5px;
 }
 
-#sidebar nav a.tab.active { background-color: #ebebeb; }
+#sidebar #nav a.tab.active { background-color: #ebebeb; }
 
 
 
@@ -138,14 +140,14 @@ h3 { font-size: 20px; margin-top: 40px; }
   padding : 36px 60px 60px 60px;
 }
 
-#main_content section {
+#main_content .koans_section {
   clear: both;
   display: block;
   margin-bottom: 35px;
   padding-top: 50px;
 }
 
-#main_content section div { margin: 20px 0; }
+#main_content .koanaons_sections_section div { margin: 20px 0; }
 
 #main_content a { color: #e70800; }
 

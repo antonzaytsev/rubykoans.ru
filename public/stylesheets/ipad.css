@@ -15,17 +15,17 @@ h2 { font-size: 30pt; }
   margin   : 0 40px 80px 40px;
 }
 
-#sidebar nav {
+#sidebar #nav {
   width       : auto;
   line-height : 30pt;
   font-size   : 14pt;
 }
 
-#sidebar nav li { font-size: 16pt; }
+#sidebar #nav li { font-size: 16pt; }
 
-#sidebar nav a { font-size: 16pt; }
+#sidebar #nav a { font-size: 16pt; }
 
-#sidebar nav a.tab {
+#sidebar #nav a.tab {
   width       : 20%;
   height      : 40pt;
   font-size   : 19pt;

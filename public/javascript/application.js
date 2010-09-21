@@ -4,11 +4,6 @@ function iPhone() {
 
 $(function(){
 
-  // IE FIX for HTML5
-  document.createElement('nav');
-  document.createElement('header');
-  document.createElement('section');
-
   $('body').append('<div id="top_line"></div>');
 
   $('a[rel=external]').click(function() {
