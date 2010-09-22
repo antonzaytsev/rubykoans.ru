@@ -4,7 +4,6 @@ function iPhone() {
 
 $(function(){
 
-  $('body').append('<div id="top_line"></div>');
 
   $('#sidebar ol a').click(function(e) {
     if(iPhone()) { return; }

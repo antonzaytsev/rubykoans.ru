@@ -15,7 +15,7 @@
     %script{ :type => 'text/javascript', :src => 'http://use.typekit.com/bsl0mwg.js' }
     %script{ :type => 'text/javascript' } try{Typekit.load();}catch(e){}
 
-  %body   
+  %body
     #main_content
       = yield
 
@@ -30,3 +30,4 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+    #top_line
