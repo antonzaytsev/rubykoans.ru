@@ -42,34 +42,36 @@ $(function(){
       logo.ontouchstart = function() { BWLogo.stop().fadeOut(200); }
       logo.ontouchend   = function() { BWLogo.stop().fadeIn(200);  }
 
-  function sectionPositions() {
-    var sections = [];
-    $('#main_content .koans_section').each(function(){
-        sections.push($(this).offset().top);
-    });
-
-    return sections;
-  };
+  var sections = [];
+  $('#main_content .koans_section').each(function(){
+      sections.push($(this).offset().top);
+  });
 
   function highlightSection(i) {
-    var sections = sectionPositions();
-
-    i > sections.length ? i = sections.length : "";
-
     $('#sidebar ol li')
       .css('font-weight', 'normal')
       .eq(i).css('font-weight', 'bold');
   }
 
   function currentIndex() {
-    var currentPosition = $(window).scrollTop(),
-        i = 0;
+    var scrollPosition = $(window).scrollTop(),
+        i=0,
+        inSection = false;
 
-    while(currentPosition > sectionPositions()[i+1]) {
+    while(!inSection) {
       i++;
+      if(sections[i-1] > scrollPosition) {
+        i = 1;
+        inSection = true;
+      } else if (scrollPosition >  sections[sections.length-1]) {
+        i = sections.length;
+        inSection = true;
+      } else {
+        inSection = sections[i-1] <= scrollPosition && scrollPosition < sections[i];
+      }
     }
 
-    return i;
+    return i-1;
   }
 
   highlightSection(currentIndex());
