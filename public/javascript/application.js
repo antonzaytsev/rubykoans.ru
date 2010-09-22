@@ -2,6 +2,7 @@ function iPhone() {
   return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i));
 }
 
+(function($){
 $.fn.boldSelectedElement = function(i) {
   $(this).css('font-weight', 'normal').eq(i).css('font-weight', 'bold');
 }
