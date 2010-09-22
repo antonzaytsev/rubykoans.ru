@@ -57,7 +57,7 @@ $(function(){
       if(sections[i-1] > scrollPosition) {
         i = 1;
         inSection = true;
-      } else if (scrollPosition >  sections[sections.length-1]) {
+      } else if (i >  sections[sections.length-1]) {
         i = sections.length;
         inSection = true;
       } else {
