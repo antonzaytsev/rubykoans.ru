@@ -6,12 +6,6 @@ $(function(){
 
   $('body').append('<div id="top_line"></div>');
 
-  $('a[rel=external]').click(function() {
-    var newWindow = window.open($(this).attr('href'), '_blank');
-    if(newWindow) { if(newWindow.focus) { newWindow.focus(); return false; } }
-    newWindow = null;
-  });
-
   $('#sidebar ol a').click(function(e) {
     if(iPhone()) { return; }
 
