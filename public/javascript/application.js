@@ -2,9 +2,44 @@ function iPhone() {
   return (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i));
 }
 
+$.fn.boldSelectedElement = function(i) {
+  $(this).css('font-weight', 'normal').eq(i).css('font-weight', 'bold');
+}
+
+$.fn.highlightVisibleAnchor = function() {
+  var $this = $(this),
+      anchors = $this.map(function() {return $(this).attr('href')}),
+      anchorPositions = $.map(anchors, function(a){return $(a).offset().top});
+
+  function currentIndex(sections) {
+    var scrollPosition = $(window).scrollTop(),
+        i=0,
+        inSection = false;
+
+    while(!inSection) {
+      i++;
+      if(sections[i-1] > scrollPosition) {
+        i = 1;
+        inSection = true;
+      } else if (i >  sections[sections.length-1]) {
+        i = sections.length;
+        inSection = true;
+      } else {
+        inSection = sections[i-1] <= scrollPosition && scrollPosition < sections[i];
+      }
+    }
+
+    return i-1;
+  }
+
+  $(this).boldSelectedElement(currentIndex(anchorPositions));
+
+  $(window).scroll(function() {
+    $this.boldSelectedElement(currentIndex(anchorPositions));
+  });
+}
+
 $(function(){
-
-
   $('#sidebar ol a').click(function(e) {
     if(iPhone()) { return; }
 
@@ -35,41 +70,7 @@ $(function(){
       logo.ontouchstart = function() { BWLogo.stop().fadeOut(200); }
       logo.ontouchend   = function() { BWLogo.stop().fadeIn(200);  }
 
-  var sections = [];
-  $('#main_content .koans_section').each(function(){
-      sections.push($(this).offset().top);
-  });
 
-  function highlightSection(i) {
-    $('#sidebar ol li')
-      .css('font-weight', 'normal')
-      .eq(i).css('font-weight', 'bold');
-  }
-
-  function currentIndex() {
-    var scrollPosition = $(window).scrollTop(),
-        i=0,
-        inSection = false;
-
-    while(!inSection) {
-      i++;
-      if(sections[i-1] > scrollPosition) {
-        i = 1;
-        inSection = true;
-      } else if (i >  sections[sections.length-1]) {
-        i = sections.length;
-        inSection = true;
-      } else {
-        inSection = sections[i-1] <= scrollPosition && scrollPosition < sections[i];
-      }
-    }
-
-    return i-1;
-  }
-
-  highlightSection(currentIndex());
-
-  $(window).scroll(function() {
-    highlightSection(currentIndex());
-  });
+  $('#sidebar ol a').highlightVisibleAnchor();
 });
+})(jQuery)
