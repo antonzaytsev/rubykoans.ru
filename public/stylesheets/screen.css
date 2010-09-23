@@ -26,7 +26,7 @@ h3 { font-size: 20px; margin-top: 40px; }
 ----------------------------------------------------------*/
 
 #sidebar {
-  position : fixed;
+  position : absolute;
   left     : 800px;
   top      : 30px;
   width    : 250px;

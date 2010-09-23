@@ -54,6 +54,15 @@ $.fn.scrollToAnchor = function() {
 $(function(){
   $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
 
+  var origTop = $('#sidebar').offset().top;
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 70) {
+      $('#sidebar').css('position', 'fixed').css('top', '-40px');
+    } else {
+      $('#sidebar').css('position', 'absolute').css('top', origTop);
+    };
+  });
+
   $('.email_address').each(function() {
     var address   = $(this).text().replace(' [at] ', '@').replace(' [dot] ', '.');
     var emailLink = '<a href="mailto:' + address + '">' + address + '</a>';
