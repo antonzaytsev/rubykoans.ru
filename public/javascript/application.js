@@ -40,8 +40,8 @@ $.fn.highlightVisibleAnchor = function() {
   });
 }
 
-$(function(){
-  $('#sidebar ol a').click(function(e) {
+$.fn.scrollToAnchor = function() {
+  return this.click(function(e) {
     if(iPhone()) { return; }
 
     e.preventDefault();
@@ -49,6 +49,10 @@ $(function(){
     var scrollTo      = targetSection.offset().top;
     $('html,body').animate({scrollTop: scrollTo});
   });
+}
+
+$(function(){
+  $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
 
   $('.email_address').each(function() {
     var address   = $(this).text().replace(' [at] ', '@').replace(' [dot] ', '.');
@@ -70,8 +74,5 @@ $(function(){
   var logo = document.getElementById('edgecase_logo');
       logo.ontouchstart = function() { BWLogo.stop().fadeOut(200); }
       logo.ontouchend   = function() { BWLogo.stop().fadeIn(200);  }
-
-
-  $('#sidebar ol a').highlightVisibleAnchor();
 });
 })(jQuery)
