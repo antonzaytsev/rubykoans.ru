@@ -13,7 +13,7 @@ h2 { font-size: 38pt; }
   left     : auto;
   top      : auto;
   width    : auto;
-  margin   : 0 0 20px 0;
+  margin   : 0 5% 20px 5%;
 }
 
 #sidebar #nav {
@@ -21,6 +21,8 @@ h2 { font-size: 38pt; }
   line-height : 30pt;
   font-size   : 14pt;
 }
+
+#sidebar ol { list-style-type: none; }
 
 #sidebar #nav li { font-size: 16pt; }
 
@@ -44,7 +46,7 @@ h2 { font-size: 38pt; }
   padding : 0;
 }
 
-#main_content section { margin: 0 5%; }
+#main_content .koans_section { margin: 0 5%; }
 
 #main_content #introduction {
   width: auto;
@@ -53,12 +55,17 @@ h2 { font-size: 38pt; }
   background-position: 100% 30%;
 }
 
-#main_content #introduction h1 { font-size: 52pt; }
+#main_content #introduction h1 { font-size: 72pt; }
 
-#main_content #introduction h1 span { font-size: 20pt; }
+#main_content #introduction h1 span { font-size: 24pt; }
 
 #main_content #introduction p {
   width       : 100%;
   font-size   : 24pt;
   line-height : 35pt;
+}
+
+#main_content p {
+  font-size   : 24px;
+  line-height : 130%; 
 }

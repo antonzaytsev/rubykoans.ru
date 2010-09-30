@@ -45,7 +45,7 @@ h2 { font-size: 30pt; }
   padding : 0;
 }
 
-#main_content section { margin: 0 5%; }
+#main_content .koans_section { margin: 0 5%; }
 
 #main_content #introduction {
   width: auto;
