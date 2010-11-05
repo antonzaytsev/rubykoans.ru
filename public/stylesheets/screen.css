@@ -10,6 +10,7 @@ body {
   left       : 0;
   height     : 6px;
   background : #e70800;
+  z-index    : 2;
 }
 
 h1, h2, h3 { color: #e70800; }
