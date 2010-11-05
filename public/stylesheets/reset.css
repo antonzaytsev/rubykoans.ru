@@ -20,4 +20,4 @@ a img, input[type="image"] { border: none; }
   height: 1%;
 }
 .clear { clear: both; }
-#your_mom { }
+nav { display: block; }

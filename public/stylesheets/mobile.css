@@ -1,6 +1,6 @@
 body { -webkit-text-stroke:0 black; }
 
-#top_line { display: none; }
+#top_line { position: absolute; }
 
 h2 { font-size: 38pt; }
 
@@ -16,7 +16,7 @@ h2 { font-size: 38pt; }
   margin   : 0 5% 20px 5%;
 }
 
-#sidebar #nav {
+#sidebar nav {
   width       : auto;
   line-height : 30pt;
   font-size   : 14pt;
@@ -24,11 +24,11 @@ h2 { font-size: 38pt; }
 
 #sidebar ol { list-style-type: none; }
 
-#sidebar #nav li { font-size: 16pt; }
+#sidebar nav li { font-size: 16pt; }
 
-#sidebar #nav a { font-size: 18pt; }
+#sidebar nav a { font-size: 18pt; }
 
-#sidebar #nav a.tab {
+#sidebar nav a.tab {
   width       : 20%;
   height      : 40pt;
   font-size   : 21pt;
@@ -46,7 +46,7 @@ h2 { font-size: 38pt; }
   padding : 0;
 }
 
-#main_content .koans_section { margin: 0 5%; }
+#main_content section { margin: 0 5%; }
 
 #main_content #introduction {
   width: auto;

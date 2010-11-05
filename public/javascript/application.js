@@ -5,12 +5,12 @@ function iPhone() {
 (function($){
   $.fn.boldSelectedElement = function(i) {
     $(this).css('font-weight', 'normal').eq(i).css('font-weight', 'bold');
-  }
+  };
 
   $.fn.highlightVisibleAnchor = function() {
     var $this = $(this),
-        anchors = $this.map(function() {return $(this).attr('href')}),
-        anchorPositions = $.map(anchors, function(a){return $(a).offset().top});
+        anchors = $this.map(function() {return $(this).attr('href'); }),
+        anchorPositions = $.map(anchors, function(a){return $(a).offset().top; });
 
     function currentIndex(sections) {
       var scrollPosition = $(window).scrollTop(),
@@ -38,7 +38,7 @@ function iPhone() {
     $(window).scroll(function() {
       $this.boldSelectedElement(currentIndex(anchorPositions));
     });
-  }
+  };
 
   $.fn.scrollToAnchor = function() {
     return this.click(function(e) {
@@ -49,7 +49,7 @@ function iPhone() {
       var scrollTo      = targetSection.offset().top;
       $('html,body').animate({scrollTop: scrollTo});
     });
-  }
+  };
 
   $(function(){
     $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
@@ -61,4 +61,4 @@ function iPhone() {
       $(this).replaceWith(emailLink);
     });
   });
-})(jQuery)
+})(jQuery);

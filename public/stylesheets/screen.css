@@ -1,6 +1,6 @@
 body {
-  font-family : 'sorts-mill-goudy-1','sorts-mill-goudy-2', serif;
-  background  : #fff;
+  font-family    : 'sorts-mill-goudy-1','sorts-mill-goudy-2', serif;
+  background     : #fff;
 }
 
 #top_line {
@@ -8,7 +8,7 @@ body {
   top        : 0;
   right      : 0;
   left       : 0;
-  height     : 4px;
+  height     : 6px;
   background : #e70800;
 }
 
@@ -78,7 +78,7 @@ h3 { font-size: 20px; margin-top: 40px; }
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#E15C56', endColorstr='#dd0000')"; /* IE8 */
 }
 
-#sidebar #nav {
+#sidebar nav {
   width  : 250px;
   margin : 0 auto;
   font-size      : 12px;
@@ -86,7 +86,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   text-transform : uppercase;
 }
 
-#sidebar #nav ol {
+#sidebar nav ol {
   clear: left;
   list-style-position: outside;
   padding: 7px 12px 5px 20px;
@@ -97,22 +97,22 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-bottom-right-radius : 5px;
 }
 
-#main_content #sidebar #nav li {
+#main_content #sidebar nav li {
   margin: 0 0 0 10px;
   border-bottom: 1px solid #ccc;
   font-size: 13px;
 }
 
-#main_content #sidebar #nav li:last-child { border-bottom: 0; }
+#main_content #sidebar nav li:last-child { border-bottom: 0; }
 
-#sidebar #nav a {
+#sidebar nav a {
   display: block;
   color: black;
   font-size: 11px;
   text-decoration: none;
 }
 
-#sidebar #nav a.tab {
+#sidebar nav a.tab {
   float: left;
   width: 115px;
   height: 28px;
@@ -127,7 +127,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   -webkit-border-top-right-radius : 5px;
 }
 
-#sidebar #nav a.tab.active { background-color: #ebebeb; }
+#sidebar nav a.tab.active { background-color: #ebebeb; }
 
 
 
@@ -140,7 +140,7 @@ h3 { font-size: 20px; margin-top: 40px; }
   padding : 36px 60px 60px 60px;
 }
 
-#main_content .koans_section {
+#main_content section {
   clear: both;
   display: block;
   margin-bottom: 35px;
@@ -182,8 +182,6 @@ h3 { font-size: 20px; margin-top: 40px; }
   background-color: black;
   background-image: -moz-linear-gradient(top, #000, #444); /* FF3.6 */
   background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #444),color-stop(1, #000)); /* Saf4+, Chrome */
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#444'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#444')"; /* IE8 */
 }
 
 #main_content .terminal p, #main_content .editor p {
@@ -199,6 +197,8 @@ h3 { font-size: 20px; margin-top: 40px; }
 ----------------------------------------------------------*/
 
 #main_content #introduction {
+  position       : relative;
+  top: 20px;
   width          : 690px;
   margin-bottom  : 20px;
   padding-top    : 0;
