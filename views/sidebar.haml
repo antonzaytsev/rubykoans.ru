@@ -1,28 +1,25 @@
 #sidebar
-  %a#download_button{ :href => 'http://github.com/downloads/edgecase/ruby_koans/rubykoans-2010-09-28-a.zip' }download the koans
+  %a#download_button(href='http://github.com/downloads/edgecase/ruby_koans/rubykoans-2010-09-28-a.zip') download the koans
 
-  %nav
-
+  %nav(class=@page)
     %a.tab{ :class => ('active' if @page == 'nix' ),    :href => '/' } *nix
     %a.tab{ :class => ('active' if @page == 'windows'), :href => '/windows' } windows
-
     %ol
       %li
-        %a{ :href => '#introduction' }introduction
+        %a(href='#introduction') introduction
       %li
-        %a{ :href => '#the_structure' }the structure
+        %a(href='#the_structure') the structure
       %li
-        %a{ :href => '#installing_ruby' }installing ruby
+        %a(href='#installing_ruby') installing ruby
       %li
-        %a{ :href => '#what_editors' }what editors can i use?
+        %a(href='#what_editors') what editors can i use?
       %li
-        %a{ :href => '#the_path' }the path to enlightenment
+        %a(href='#the_path') the path to enlightenment
       %li
-        %a{ :href => '#authors' }authors
+        %a(href='#authors') authors
       %li
-        %a{ :href => '#inspiration' }inspiration
+        %a(href='#inspiration') inspiration
       %li
-        %a{ :href => '#other_resources' }other resources
+        %a(href='#other_resources') other resources
 
-  %a{ :href => 'http://edgecase.com', :target => '_blank', :id => 'edgecase_logo' }
-    %img{ :src => '/images/edgecase_logo.gif', :alt => 'EdgeCase' }
+  %a(href='http://edgecase.com' target='_blank' id='edgecase_logo') Brought to you by EdgeCase
