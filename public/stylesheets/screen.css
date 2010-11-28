@@ -147,8 +147,8 @@ h3 { font-size: 20px; margin-top: 40px; }
 #main_content section {
   clear         : both;
   display       : block;
-  margin-bottom : 35px;
-  padding-top   : 50px;
+  margin-bottom : 25px;
+  padding-top   : 65px;
 }
 
 #main_content .koanaons_sections_section div { margin: 20px 0; }
