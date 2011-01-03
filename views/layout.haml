@@ -1,20 +1,23 @@
 !!! 5
 %html
   %head
-    %title Learning Ruby with the EdgeCase Ruby Koans
-    %meta{ :name => 'description',   :content => 'Learning Ruby with the EdgeCase Ruby Koans' }
-    %meta{ :name => 'keywords',      :content => 'ruby' }
-    %link{ :rel  => 'shortcut icon', :href    =>'/favicon.ico', :type => 'image/x-icon' }
-    %link{ :rel  => 'stylesheet',    :media   => 'screen',      :type => 'text/css', :href => '/stylesheets/reset.css' }
-    %link{ :rel  => 'stylesheet',    :media   => 'screen',      :type => 'text/css', :href => '/stylesheets/screen.css' }
-    %link{ :rel  => 'stylesheet',    :media   => 'only screen and (max-width: 480px), only screen and (max-device-width: 480px)', :type => 'text/css', :href => '/stylesheets/mobile.css' }
-    %link{ :rel  => 'stylesheet',    :media   => '(min-device-width: 768px) and (max-device-width: 1024px)', :type => 'text/css', :href => '/stylesheets/ipad.css' }
+    %title Learn Ruby with the EdgeCase Ruby Koans
+    %meta{ :name => 'description', :content => 'Learn Ruby with the EdgeCase Ruby Koans' }
+    %meta{ :name => 'keywords',    :content => 'ruby' }
+    %meta{ :name => 'apple-mobile-web-app-capable', :content => 'yes' }
+    %meta{ :name => 'apple-mobile-web-app-status-bar-style', :content => 'black' }
+    %link{ :rel  => 'apple-touch-icon', :href => '/apple_favicon.png' }
+    %link{ :rel  => 'shortcut icon',    :href => '/favicon.ico', :type => 'image/x-icon' }
+    %link{ :rel  => 'stylesheet', :media => 'screen', :type => 'text/css', :href => '/stylesheets/reset.css' }
+    %link{ :rel  => 'stylesheet', :media => 'screen', :type => 'text/css', :href => '/stylesheets/screen.css' }
+    %link{ :rel  => 'stylesheet', :media => 'only screen and (max-width: 480px), only screen and (max-device-width: 480px)', :type => 'text/css', :href => '/stylesheets/mobile.css' }
+    %link{ :rel  => 'stylesheet', :media => '(min-device-width: 768px) and (max-device-width: 1024px)', :type => 'text/css', :href => '/stylesheets/ipad.css' }
 
     %script{ :type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' }
     %script{ :type => 'text/javascript', :src => '/javascript/application.js' }
     %script{ :type => 'text/javascript', :src => 'http://use.typekit.com/bsl0mwg.js' }
     %script{ :type => 'text/javascript' } try{Typekit.load();}catch(e){}
-    
+
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -23,8 +26,6 @@
     #top_line
     #main_content
       = yield
-      
-    %script{ :type => 'text/javascript', :src => 'http://dnn506yrbagrg.cloudfront.net/pages/scripts/0011/2356.js'}
 
     :javascript
         var _gaq = _gaq || [];
