@@ -1,6 +1,8 @@
 body {
   font-family : 'OFL Sorts Mill Goudy', 'sorts-mill-goudy-1','sorts-mill-goudy-2', serif;
-  background  : #fff; }
+  background  : #fff;
+  line-height: 1.2;
+}
 
 #top_line {
   position   : fixed;
@@ -13,7 +15,7 @@ body {
 
 h1, h2, h3 { color: #e70800; }
 h1 { font-size: 64px; }
-h2 { font-size: 28px; background: url(/images/header_line.gif) repeat-x 0 50%; }
+h2 { font-size: 28px; background: url(/images/header_line.gif) repeat-x 0 50%; margin-bottom: 2px; }
 h2 span { background: #fff; padding-right: 12px; }
 h3 { font-size: 20px; margin-top: 40px; }
 

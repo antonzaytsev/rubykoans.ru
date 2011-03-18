@@ -5,23 +5,9 @@
     %a.tab{ :class => ('active' if @page == 'nix' ),    :href => '/' } *nix
     %a.tab{ :class => ('active' if @page == 'windows'), :href => '/windows' } windows
     %ol
-      %li
-        %a{:href=>'#introduction'} вступление
-      %li
-        %a{:href=>'#the_structure'} структура
-      %li
-        %a{:href=>'#installing_ruby'} установка ruby
-      %li
-        %a{:href=>'#what_editors'} какие редакторы я могу использовать?
-      %li
-        %a{:href=>'#the_path'} путь к просвещению
-      %li
-        %a{:href=>'#authors'} авторы
-      %li
-        %a{:href=>'#cc'} лицензия
-      %li
-        %a{:href=>'#inspiration'} вдохновители
-      %li
-        %a{:href=>'#other_resources'} другие ресурсы
+      - @blocks.each do |item|
+        %li
+          %a{:href => "##{item[:id] || item[:name]}"}
+            = item[:title]
 
   %a{:href=>'http://edgecase.com', :target=>'_blank', :id=>'edgecase_logo'} Предоставлено EdgeCase

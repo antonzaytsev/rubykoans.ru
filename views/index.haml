@@ -1,19 +1,24 @@
-= haml :introduction, :layout => false
-
 = haml :sidebar, :layout => false
 
-= haml :structure, :layout => false
+- @blocks.each do |item|
+  = haml item[:name].to_sym, :layout => false
 
-= haml :installing_ruby_on_nix, :layout => false
-
-= haml :what_editors_nix, :layout => false
-
-= haml :the_path_nix, :layout => false
-
-= haml :authors, :layout => false
-
-= haml :cc, :layout => false
-
-= haml :inspiration, :layout => false
-
-= haml :other_resources, :layout => false
+-#= haml :introduction, :layout => false
+-#
+-#= haml :sidebar, :layout => false
+-#
+-#= haml :structure, :layout => false
+-#
+-#= haml :installing_ruby_on_nix, :layout => false
+-#
+-#= haml :what_editors_nix, :layout => false
+-#
+-#= haml :the_path_nix, :layout => false
+-#
+-#= haml :authors, :layout => false
+-#
+-#= haml :cc, :layout => false
+-#
+-#= haml :inspiration, :layout => false
+-#
+-#= haml :other_resources, :layout => false
