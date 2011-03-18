@@ -1,10 +1,12 @@
 %section#what_editors
-  %h2 <span>What Editors Can I Use?</span>
+  %h2 
+    %span Какие редакторы я могу использовать?
+	
   %p.instructions_message
-    These instructions are for Windows. We also have 
-    %a{:href => '/#what_editors'} *nix instructions
+    Эта инструкция для пользователей Windows. Вы так же можете посмотреть
+    %a{:href => '/#what_editors'} инструкцию для пользователей *nix
     \.
-  %p You can really use any editor you'd like, but here are some suggestions:
+  %p На самом деле Вы вольны использовать любой редактор который Вам предпочтительнее, но есть несколько предложений:
 
   %ul
     - @editors.sort_by{rand}.each do |editor|

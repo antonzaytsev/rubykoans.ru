@@ -1,8 +1,9 @@
 %section#installing_ruby
-  %h2 <span>Installing Ruby</span>
+  %h2
+    %span Установка Ruby
   %p.instructions_message
-    These instructions are for Windows. We also have 
-    %a{:href => '/#installing_ruby'} *nix instructions
+    Эта инструкция предназначена для Windows. У нас так же есть
+    %a{:href => '/#installing_ruby'} установка для *nix
     \.
   %p You must have a version of Ruby installed in order to run the Koans. Please take the time to download a version of Ruby that best suits your needs. The koans use features that are built into the ruby language so many ports of the Ruby Interpreter will run the koans without additional configuration or hacking. If you're unsure which version of ruby to install, the one click installer of MRI (Matz Ruby Interpreter) in the 1.8 series is probably perfect to get started. 
 
@@ -20,15 +21,15 @@
   %p Download it and double click the installer. This will place all the ruby libraries and executables into a directory on your local machine. If you happen to forget to tick the box that asks if you wish to alter your PATH variable (where the command line looks for programs to run when you're typing commands) then you can do that manually by: 
 
   %ol
-    %li Find where you installed Ruby (usually C:\Ruby) 
-    %li Right click on My Computer (or the recent windows equal) and click "Properties" 
-    %li On the advanced tab click the button "Environmental Variables" 
-    %li Add "PATH-TO-RUBY\bin;" to the beginning (or end, or whereever) 
+    %li Найдите куда Вы установили Ruby (обычно это C:\Ruby) 
+    %li Кликните правой кнопкой мыши по икноке "Мой компьютер" (or the recent windows equal) and click "Properties" 
+    %li На вкладке "Дополнительно" нажмите на кнопку "Переменные окружения" 
+    %li Добавьте туда "Путь-до-Ruby\bin;" в начало строки (или в конец, или куда угодно (прим. пер. - "после имеющегося символа ';'") 
 
-  %p Now open a command prompt and type "ruby -v" if you get a response and no error, then you've done it! Now that you have ruby installed you'll need to pull down the koans.
+  %p Теперь откройте командную строку и выполните "ruby -v", если вы получили ответ и никаких ошибок, у вас все получилось! Теперь когда у вас есть установленный ruby, Вам нужно installed you'll need to pull down the koans.
 
   %ol
-    %li Unzip to C:\oss\ruby_koans
-    %li Open command prompt (start &gt; run &gt; type "cmd" hit enter) 
-    %li run (based on step 1) "cd C:\oss\ruby_koans"
-    %li run "rake" 
+    %li Распакуйте в папку C:\oss\ruby_koans
+    %li Откройте командную строку (Пуск &gt; выполнить &gt; панишите "cmd" и нажмите "Enter") 
+    %li выполните (из шага #1) "cd C:\oss\ruby_koans"
+    %li выполните "rake" 

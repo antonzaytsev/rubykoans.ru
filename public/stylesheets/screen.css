@@ -249,10 +249,12 @@ h3 { font-size: 20px; margin-top: 40px; }
 
 #main_content #other_resources a span,
 #main_content #inspiration a span {
-  display         : block;
   color           : #555;
   font-style      : italic;
-  text-decoration : none; }
+  text-decoration : none;
+}
+
+#main_content #inspiration a span{display:block;}
 
 
 
