@@ -8,9 +8,10 @@ function iPhone() {
   };
 
   $.fn.highlightVisibleAnchor = function() {
+
     var $this = $(this),
         anchors = $this.map(function() {return $(this).attr('href'); }),
-        anchorPositions = $.map(anchors, function(a){return $(a).offset().top; });
+        anchorPositions = $.map(anchors, function(a){return parseInt($(a).offset().top); });
 
     function currentIndex(sections) {
       var scrollPosition = $(window).scrollTop(),
@@ -22,7 +23,8 @@ function iPhone() {
         if(sections[i-1] > scrollPosition) {
           i = 1;
           inSection = true;
-        } else if (i >  sections[sections.length-1]) {
+        }
+        else if (i > sections[sections.length-1]) {
           i = sections.length;
           inSection = true;
         } else {
@@ -33,11 +35,9 @@ function iPhone() {
       return i-1;
     }
 
-    $(this).boldSelectedElement(currentIndex(anchorPositions));
-
-    $(window).scroll(function() {
+    $(window).bind('scroll', function() {
       $this.boldSelectedElement(currentIndex(anchorPositions));
-    });
+    }).trigger('scroll');
   };
 
   $.fn.scrollToAnchor = function() {
@@ -52,13 +52,15 @@ function iPhone() {
   };
 
   $(function(){
-    $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
 
     $('.email_address').each(function() {
-      var address   = $(this).text().replace(' [at] ', '@').replace(' [dot] ', '.');
+      var address   = $(this).text().replace(' [собака] ', '@').replace(' [точка] ', '.');
       var emailLink = '<a href="mailto:' + address + '">' + address + '</a>';
 
       $(this).replaceWith(emailLink);
     });
+
+    $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
+
   });
 })(jQuery);
