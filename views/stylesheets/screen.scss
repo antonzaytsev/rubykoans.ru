@@ -1,0 +1,300 @@
+$main-color: #e70800;
+
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin gradient($top-color, $bottom-color) {
+  background-color: $bottom-color;
+  background-image: -moz-linear-gradient(top, $top-color, $bottom-color); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $bottom-color),color-stop(1, $top-color));
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='$bottom-color', endColorstr='$top-color'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$bottom-color', endColorstr='$top-color')"; /* IE8 */
+}
+
+
+body {
+  font-family : 'OFL Sorts Mill Goudy', 'sorts-mill-goudy-1', 'sorts-mill-goudy-2', serif;
+  background  : #fff;
+  line-height: 1.2;
+}
+
+#top_line {
+  position   : fixed;
+  top        : 0;
+  right      : 0;
+  left       : 0;
+  height     : 6px;
+  background : $main-color;
+  z-index    : 2; }
+
+h1, h2, h3 { color: $main-color; }
+h1 { font-size: 64px; }
+h2 { font-size: 28px; background: url(/images/header_line.gif) repeat-x 0 50%; margin-bottom: 2px; }
+h2 span { background: #fff; padding-right: 12px; }
+h3 { font-size: 20px; margin-top: 40px; }
+
+.clear { clear: both; height:0; display:block; }
+
+section {
+  clear         : both;
+  display       : block;
+  margin-bottom : 25px;
+  padding-top   : 65px;
+}
+
+
+
+/*-- Sidebar
+----------------------------------------------------------*/
+
+#edgecase_logo {
+  display     : block;
+  width       : 250px;
+  height      : 79px;
+  margin      : 40px 0 0 0; 
+  text-indent : -999em;
+  background  : url(/images/edgecase_logo.gif) no-repeat 10px; }
+
+
+#main_content #download_button {
+  display         : block;
+  height          : 40px;
+  margin          : 0 auto 30px auto;
+  padding         : 0px;
+  color           : #fff;
+  font-size       : 14px;
+  letter-spacing  : 1px;
+  line-height     : 42px;
+  text-align      : center;
+  text-decoration : none;
+  text-transform  : uppercase;
+  background:#d00;
+
+  @include gradient(#FB746F, #d00);
+  @include rounded(4px);
+
+  &:active {
+    @include gradient(#E15C56, #d00);
+  }
+}
+
+#sidebar {
+  position : fixed;
+  left     : 800px;
+  top      : 30px;
+  width    : 250px;
+  padding  : 50px 0 0 0;
+
+  nav {
+    width          : 250px;
+    margin         : 0 auto;
+    font-size      : 12px;
+    line-height    : 26px;
+    text-transform : uppercase;
+
+    ol {
+      clear: left;
+      list-style-position: outside;
+      padding: 7px 12px 5px 20px;
+      background-color: #f3f3f3;
+      -moz-border-radius-bottomleft      : 4px;
+      -moz-border-radius-bottomright     : 4px;
+      -webkit-border-bottom-left-radius  : 4px;
+      -webkit-border-bottom-left-radius  : 4px;
+      border-bottom-right-radius         : 4px;
+      border-bottom-right-radius         : 4px;
+    }
+  }
+}
+
+#sidebar nav.windows ol {
+  -moz-border-radius-topleft     : 4px;
+  -webkit-border-top-left-radius : 4px;
+  border-top-left-radius         : 4px; }
+
+#sidebar nav.nix ol {
+  -moz-border-radius-topright     : 4px;
+  -webkit-border-top-right-radius : 4px;
+  border-top-right-radius         : 4px; }
+
+#main_content #sidebar nav li {
+  margin        : 0 0 0 10px;
+  border-bottom : 1px solid #ddd;
+  font-size     : 13px; }
+
+#main_content #sidebar nav li:last-child { border-bottom: 0; }
+
+#sidebar nav a {
+  display         : block;
+  color           : black;
+  font-size       : 11px;
+  text-decoration : none; }
+
+#sidebar nav a.tab {
+  float        : left;
+  width        : 115px;
+  height       : 28px;
+  padding-left : 10px;
+  color        : $main-color;
+  font-size    : 13px;
+  line-height  : 32px;
+  -moz-border-radius-topleft      : 4px;
+  -moz-border-radius-topright     : 4px;
+  -webkit-border-top-left-radius  : 4px;
+  -webkit-border-top-right-radius : 4px;
+  border-top-left-radius          : 4px;
+  border-top-right-radius         : 4px; }
+
+#sidebar nav a.tab.active { background-color: #f3f3f3; }
+
+
+
+/*-- Main Content
+----------------------------------------------------------*/
+
+#main_content {
+  width   : 600px;
+  margin  : 0;
+  padding : 36px 60px 30px 60px;
+
+  a { color: $main-color; }
+
+  ul {
+    list-style-type     : circle;
+    list-style-position : inside;
+    margin-left         : 20px;
+  }
+
+  p {
+    margin      : 20px 0;
+    font-size   : 18px;
+    line-height : 25px;
+  }
+
+  p.instructions_message {
+    margin-top  : 0;
+    margin-left : 0;
+    color       : #666;
+    font-size   : 14px;
+    font-style  : italic;
+    line-height : 24px;
+
+    a { color: #f54d47; }
+  }
+
+}
+
+#main_content .koanaons_sections_section div { margin: 20px 0; }
+
+#main_content ul li,
+#main_content ol li { margin-bottom: 0.5em; }
+
+
+
+.terminal, .editor {
+  padding          : 5px 10px;
+  background-color : black;
+  
+  @include gradient(#000, #444);
+
+  p {
+    margin      : 10px 0;
+    color       : #fff;
+    font-family : monaco, monospace;
+    font-size   : 14px;
+  }
+}
+
+
+
+/*-- Introduction Section
+----------------------------------------------------------*/
+
+#introduction {
+  position       : relative;
+  top            : 20px;
+  width          : 690px;
+  margin-bottom  : 20px;
+  padding-top    : 0;
+  padding-bottom : 106px;
+  background     : url(../images/enso.gif) no-repeat 91% 0;
+
+  h1 {
+    margin-bottom : 45px;
+    padding-top   : 24px;
+
+    span {
+      display        : block;
+      margin         : 10px 0 0 0;
+      color          : #444;
+      font-size      : 16px;
+      letter-spacing : 3px;
+      text-transform : uppercase;
+    }
+  }
+
+  p {
+    width       : 600px;
+    color       : #555;
+    font-size   : 21px;
+    line-height : 35px;
+    text-align  : justify;
+  }
+}
+
+
+
+/*-- Structure Section
+----------------------------------------------------------*/
+
+#structure {
+  img{
+    float  : left;
+    margin : 20px 30px 30px 0;
+  }
+}
+
+
+
+/*-- Authors Section
+----------------------------------------------------------*/
+
+#authors p {
+  float : left;
+  width : 275px;
+}
+
+
+
+/*-- Other Resources Section
+----------------------------------------------------------*/
+
+#other_resources { margin-bottom: 0; }
+
+
+
+/*-- Inspiration & Other Resources Section
+----------------------------------------------------------*/
+
+#main_content #inspiration p a,
+#main_content #other_resources p a { line-height: 16px; text-decoration: none; }
+
+#main_content #other_resources a span,
+#main_content #inspiration a span {
+  color           : #555;
+  font-style      : italic;
+  text-decoration : none;
+}
+
+#main_content #inspiration a span{display:block;}
+
+
+
+#mountains {
+  padding-top : 3em;
+  color       : #9b9b9b;
+  font-size   : 24px;
+}
