@@ -53,12 +53,12 @@ function iPhone() {
 
   $(function(){
 
-    $('.email_address').each(function() {
-      var address   = $(this).text().replace(' [собака] ', '@').replace(' [точка] ', '.');
-      var emailLink = '<a href="mailto:' + address + '">' + address + '</a>';
-
-      $(this).replaceWith(emailLink);
-    });
+//    $('.email_address').each(function() {
+//      var address   = $(this).text().replace(' [собака] ', '@').replace(' [точка] ', '.');
+//      var emailLink = '<a href="mailto:' + address + '">' + address + '</a>';
+//
+//      $(this).replaceWith(emailLink);
+//    });
 
     $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
 

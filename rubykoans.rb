@@ -3,6 +3,7 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 
+
 not_found do
   haml :error
 end
@@ -58,4 +59,6 @@ end
 get '/stylesheets/screen.css' do
   scss 'stylesheets/screen'.to_sym
 end
+
+#i18 = R18n::I18n.new
 
