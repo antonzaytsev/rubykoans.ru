@@ -5,31 +5,40 @@
     Эта инструкция предназначена для Windows. У нас так же есть
     %a{:href => '/#installing_ruby'} установка для *nix
     \.
-  %p You must have a version of Ruby installed in order to run the Koans. Please take the time to download a version of Ruby that best suits your needs. The koans use features that are built into the ruby language so many ports of the Ruby Interpreter will run the koans without additional configuration or hacking. If you're unsure which version of ruby to install, the one click installer of MRI (Matz Ruby Interpreter) in the 1.8 series is probably perfect to get started. 
+  %p
+    Для того чтобы запустить коаны Вам нужен установленный Ruby.
+    Пожалуйста, найдите время, чтобы скачать и установить версию Ruby, которая больше всего вам подойдет.
+    Коаны используют только стандартные функции языка Ruby, поэтому их работоспособность не зависит от Ruby интерпретатора.
+    Если вы не уверены какую версию Ruby вам нужно установить, то просто установите MRI (Matz Ruby Interpreter), ветка 1.8 вероятнее всего подойдет лучше всего для начала.
 
   %p
-    If you're interested in running the Koans (or any other Ruby programs) in multiple Ruby versions then you'll probably want to download "Pik" which is a ruby package manager for windows (
+    Если Вы хотите попробовать запустить Коаны (или любые другие Ruby приложения) в различных версиях Ruby, тогда возможно вы захотите скачать "Pik" - пакетный менеджер Ruby для windows (
     %a{ :href => 'http://github.com/vertiginous/pik', :target => '_blank' } http://github.com/vertiginous/pik
-    ) which is based on the *nix tool RVM (
+    ), который основан на "RVM" - приложении для *nix платформ (
     %a{ :href => 'http://rvm.beginrescueend.com', :target => '_blank' } http://rvm.beginrescueend.com
     ).
 
   %p
-    So, follow this link and download any of the 1.8 packages:
+    Перейдите по ссылку и скачайте любой установщик ветки 1.8:
     %a{ :href => 'http://rubyforge.org/frs/?group_id=167&release_id=42563', :target => '_blank' } http://rubyforge.org/frs/?group_id=167&amp;release_id=42563
 
-  %p Download it and double click the installer. This will place all the ruby libraries and executables into a directory on your local machine. If you happen to forget to tick the box that asks if you wish to alter your PATH variable (where the command line looks for programs to run when you're typing commands) then you can do that manually by: 
+  %p
+    Скачайте установщик и запустите его.
+    Установщик распакует и поместит все необходимые библиотеки и исполняемые файлы в папку на локальной машине.
+    Если так случилось, что вы забыли отметить галочкой пункт, который бы автоматически дополнил переменную окружения (в этой переменной командная строка использует пути до вызываемых программ когда вы набираете команды), то вы можете сделать это самостоятельно:
 
   %ol
-    %li Найдите куда Вы установили Ruby (обычно это C:\Ruby) 
-    %li Кликните правой кнопкой мыши по икноке "Мой компьютер" (or the recent windows equal) and click "Properties" 
-    %li На вкладке "Дополнительно" нажмите на кнопку "Переменные окружения" 
-    %li Добавьте туда "Путь-до-Ruby\bin;" в начало строки (или в конец, или куда угодно (прим. пер. - "после имеющегося символа ';'") 
+    %li Найдите, где Вы установили Ruby (к примеру C:\Ruby)
+    %li Кликните правой кнопкой мыши по икноке "Мой компьютер" и выберите пункт "Свойства"
+    %li На вкладке "Дополнительно" нажмите на кнопку "Переменные окружения"
+    %li Добавьте туда "Путь-до-Ruby\bin;"(к примеру "C:\Ruby\bin;") в начало строки (или в конец, или куда угодно, после любого имеющегося символа ';')
 
-  %p Теперь откройте командную строку и выполните "ruby -v", если вы получили ответ и никаких ошибок, у вас все получилось! Теперь когда у вас есть установленный ruby, Вам нужно installed you'll need to pull down the koans.
+  %p
+    Теперь откройте командную строку и выполните "ruby -v", если вы получили ответ и никаких ошибок, у вас все получилось!
+    Теперь когда у вас есть установленный ruby, Вам нужно скачать сами коаны (справа большая красная кнопка).
 
   %ol
-    %li Распакуйте в папку C:\oss\ruby_koans
-    %li Откройте командную строку (Пуск &gt; выполнить &gt; панишите "cmd" и нажмите "Enter") 
-    %li выполните (из шага #1) "cd C:\oss\ruby_koans"
-    %li выполните "rake" 
+    %li Распакуйте их в папку C:\oss\ruby_koans
+    %li Откройте командную строку (Пуск &gt; выполнить &gt; напишите "cmd" и нажмите "Enter")
+    %li Выполните (путь из шага #1) "cd C:\oss\ruby_koans"
+    %li Выполните "rake"

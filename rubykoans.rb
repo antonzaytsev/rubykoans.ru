@@ -22,12 +22,12 @@ get '/' do
     {:name => 'introduction', :title => 'вступление'},
     {:name => 'structure', :title => 'структура'},
     {:name => "installing_ruby_on_#{@page}", :title => 'установка ruby', :id => "installing_ruby"},
-    {:name => "what_editors_#{@page}", :title => 'Редакторы', :id => "what_editors"},
+    {:name => "what_editors_#{@page}", :title => 'редакторы', :id => "what_editors"},
     {:name => "the_path_#{@page}", :title => 'путь к просвещению', :id => "the_path"},
     {:name => 'authors', :title => 'авторы'},
     {:name => 'cc', :title => 'лицензия'},
-    {:name => 'inspiration', :title => 'вдохновители'},
-    {:name => 'other_resources', :title => 'Дополнительные ресурсы'}
+    {:name => 'inspiration', :title => 'вдохновение'},
+    {:name => 'other_resources', :title => 'дополнительные ресурсы'}
   ]
 
   haml :index
@@ -45,12 +45,12 @@ get '/windows' do
     {:name => 'introduction', :title => 'вступление'},
     {:name => 'structure', :title => 'структура'},
     {:name => "installing_ruby_on_#{@page}", :title => 'установка ruby', :id => "installing_ruby"},
-    {:name => "what_editors_#{@page}", :title => 'Редакторы', :id => "what_editors"},
+    {:name => "what_editors_#{@page}", :title => 'редакторы', :id => "what_editors"},
     {:name => "the_path_#{@page}", :title => 'путь к просвещению', :id => "the_path"},
     {:name => 'authors', :title => 'авторы'},
     {:name => 'cc', :title => 'лицензия'},
-    {:name => 'inspiration', :title => 'вдохновители'},
-    {:name => 'other_resources', :title => 'other_resources'}
+    {:name => 'inspiration', :title => 'вдохновение'},
+    {:name => 'other_resources', :title => 'дополнительные ресурсы'}
   ]
 
   haml :windows
