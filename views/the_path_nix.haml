@@ -14,11 +14,13 @@
     %p [ ruby_koans ] $ ruby path_to_enlightenment.rb
 
   #red_green_refactor
-    %h3 Red, Green, Refactor
-    %p In test-driven development (TDD) the mantra has always been red: write a failing test and run it, green: make the test pass, and refactor: look at the code and see if you can make it any better. 
-    %p With the koans, you will need to run the tests and see it fail (red), make the test pass (green), then take a moment and reflect upon the test to see what it is teaching you and improve the code to better communicate its intent (refactor).
-    %p The very first time you run it you will see the following output:
-    %div.terminal 
+    %h3 Красный, Зеленый, Рефакторинг
+    %p
+      В мантре разработки через тестирование (test-driven development, TDD) есть три различных состояния:
+      Красный - напиши неработающий тест и запусти его, Зеленый - сделай так, чтобы этот тест работал и Рефакторинг - взгляни на код и попробуй сделать его лучше, на сколько это возможно.
+    %p Во время прохождения Коанов сначала Вы запускаете текст и видите как он не проходит (красный), исправляете код для прохождения теста (зеленый), после вы размышляете над кодом пройденного теста и смотрите, изучаете и думаете как улучшить код, упростить для большей простоты и читаемости (рефакторинг).
+    %p Во время первого запуска вы увидите следующее:
+    %div.terminal
       %p 
         [ ruby_koans ] $ ruby path_to_enlightenment.rb
         %br
@@ -41,7 +43,7 @@
         path_to_enlightenment.rb:27
       %p 
         mountains are merely mountains
-    %p You have come to the first error. Notice you are told where to look for the error:
+    %p Вы добрались до первой ошибки. Обратите внимание на то, где находится эта ошибка:
     %div.terminal 
       %p 
         Please meditate on the following code:
@@ -49,7 +51,7 @@
         \./about_asserts.rb:10:in `test_assert_truth'
         %br
         path_to_enlightenment.rb:27
-    %p You then open up the about_asserts.rb file in your text editor and look at line 10:
+    %p После открывайте файл about_asserts.rb в вашем текстовом редакторе и обратите внимание на строку № 10:
     %div.editor
       %p 
         \# We shall contemplate truth by testing reality, via asserts.
@@ -59,6 +61,8 @@
         &nbsp;&nbsp;assert false  # This should be true
         %br
         end
-    %p You then change false to true and run the tests again. You should get a new error.
-    %p Before moving on, think about what you are learning. 
-    %p In this specific case, ignore everything except the method name (test_assert_truth) and the parts inside the method (everything before the end). The goal is for you to see that if you pass a value to the assert method, it will either ensure it is true and continue on, or fail if in fact the statement is false.
+    %p После вы просто меняете false на true и запускаете тест снова. Вы должны увидеть следующую ошибку.
+    %p Но до того как двигаться дальше, подумайте чему вы научились "решая" тест.
+    %p
+      В этом моменте, не обращайте внимание ни на что кроме имени метода (test_assert_truth) и кода внутри метода (все до закрывающей метод конструкции "end").
+      Целью является увидеть, что если передать значение в метод "assert", оно либо будет принято (true) и проверка будет пройдена, либо не примет если переданное значение будет имеет or fail if in fact the ложное утверждение (false).
