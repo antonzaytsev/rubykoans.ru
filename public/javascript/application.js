@@ -34,7 +34,7 @@ function iPhone() {
 
       return i-1;
     }
-
+    
     $(window).bind('scroll', function() {
       $this.boldSelectedElement(currentIndex(anchorPositions));
     }).trigger('scroll');
@@ -61,6 +61,11 @@ function iPhone() {
     });
 
     $('#sidebar ol a').scrollToAnchor().highlightVisibleAnchor();
+
+    var translate_help = $('#translate_help');
+    $(window).bind('load', function(){
+      translate_help.css('top', -translate_help.height()).show().animate({top:0}, {duration:1000});
+    });
 
   });
 })(jQuery);

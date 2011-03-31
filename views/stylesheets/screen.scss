@@ -298,3 +298,25 @@ section {
   color       : #9b9b9b;
   font-size   : 24px;
 }
+
+
+#translate_help{
+  background: none repeat scroll 0 0 #E70800;
+  color: #FFFFFF;
+  display: none;
+  font-size: 14px;
+  left: 0;
+  line-height: 14px;
+  padding: 4px 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+
+  a{
+    color     : #fff;
+    font-size : 14px;
+  }
+
+}
