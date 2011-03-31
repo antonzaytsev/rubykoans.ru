@@ -77,7 +77,7 @@ section {
   @include rounded(4px);
 
   &:active {
-    @include gradient(#E15C56, #d00);
+    @include gradient(#d00, #E15C56);
   }
 }
 
@@ -107,18 +107,44 @@ section {
       border-bottom-right-radius         : 4px;
       border-bottom-right-radius         : 4px;
     }
+    
+    &.windows ol {
+      -moz-border-radius-topleft     : 4px;
+      -webkit-border-top-left-radius : 4px;
+      border-top-left-radius         : 4px;
+    }
+
+    &.nix ol {
+      -moz-border-radius-topright     : 4px;
+      -webkit-border-top-right-radius : 4px;
+      border-top-right-radius         : 4px;
+    }
+    a {
+      display         : block;
+      color           : #000;
+      font-size       : 11px;
+      text-decoration : none;
+
+      &.tab {
+        float        : left;
+        width        : 115px;
+        height       : 28px;
+        padding-left : 10px;
+        color        : $main-color;
+        font-size    : 13px;
+        line-height  : 32px;
+        -moz-border-radius-topleft      : 4px;
+        -moz-border-radius-topright     : 4px;
+        -webkit-border-top-left-radius  : 4px;
+        -webkit-border-top-right-radius : 4px;
+        border-top-left-radius          : 4px;
+        border-top-right-radius         : 4px;
+
+        &.active { background-color: #f3f3f3; }
+      }
+    }
   }
 }
-
-#sidebar nav.windows ol {
-  -moz-border-radius-topleft     : 4px;
-  -webkit-border-top-left-radius : 4px;
-  border-top-left-radius         : 4px; }
-
-#sidebar nav.nix ol {
-  -moz-border-radius-topright     : 4px;
-  -webkit-border-top-right-radius : 4px;
-  border-top-right-radius         : 4px; }
 
 #main_content #sidebar nav li {
   margin        : 0 0 0 10px;
@@ -126,29 +152,6 @@ section {
   font-size     : 13px; }
 
 #main_content #sidebar nav li:last-child { border-bottom: 0; }
-
-#sidebar nav a {
-  display         : block;
-  color           : black;
-  font-size       : 11px;
-  text-decoration : none; }
-
-#sidebar nav a.tab {
-  float        : left;
-  width        : 115px;
-  height       : 28px;
-  padding-left : 10px;
-  color        : $main-color;
-  font-size    : 13px;
-  line-height  : 32px;
-  -moz-border-radius-topleft      : 4px;
-  -moz-border-radius-topright     : 4px;
-  -webkit-border-top-left-radius  : 4px;
-  -webkit-border-top-right-radius : 4px;
-  border-top-left-radius          : 4px;
-  border-top-right-radius         : 4px; }
-
-#sidebar nav a.tab.active { background-color: #f3f3f3; }
 
 
 
@@ -185,13 +188,13 @@ section {
     a { color: #f54d47; }
   }
 
+  .koanaons_sections_section div {
+    margin: 20px 0;
+  }
+
+  ul li, ol li { margin-bottom: 0.5em; }
+
 }
-
-#main_content .koanaons_sections_section div { margin: 20px 0; }
-
-#main_content ul li,
-#main_content ol li { margin-bottom: 0.5em; }
-
 
 
 .terminal, .editor {
